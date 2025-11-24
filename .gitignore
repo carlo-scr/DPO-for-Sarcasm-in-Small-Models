@@ -1,2 +1,12 @@
 # Ignore SARC dataset files
 data/SARC/
+
+# Ignore trained model checkpoints
+qwen_sarc_sft/
+qwen_sarcasm_dpo/
+qwen_sarcasm_lora/
+
+# Ignore evaluation results
+evaluation_results.json
+results_*_model.json
+comparative_results.json
