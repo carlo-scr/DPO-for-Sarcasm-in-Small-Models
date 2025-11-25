@@ -175,7 +175,7 @@ def train_dpo(csv_path, output_dir="./qwen_sarcasm_dpo", adapter_path=None):
         gradient_accumulation_steps=16,  # Maintain effective batch size
         learning_rate=5e-5,
         warmup_steps=50,
-        logging_steps=25,
+        logging_steps=100,
         eval_strategy="steps",
         eval_steps=100,
         save_steps=100,
@@ -188,6 +188,8 @@ def train_dpo(csv_path, output_dir="./qwen_sarcasm_dpo", adapter_path=None):
         max_length=512,  # Increased to accommodate richer responses
         max_prompt_length=256,
         beta=0.5,  # ENHANCED: Increased from 0.1 to 0.5 for stronger preference signal
+        disable_tqdm=False,
+        logging_first_step=False
         # Higher beta = model learns more aggressively from preference differences
     )
     
