@@ -130,7 +130,7 @@ def train_model(model, tokenizer, train_dataset, val_dataset, output_dir="./qwen
         gradient_accumulation_steps=8,  # Increased to maintain effective batch size of 16
         learning_rate=2e-4,
         warmup_steps=50,
-        logging_steps=25,
+        logging_steps=100,
         eval_strategy="steps",
         eval_steps=100,
         save_steps=100,
@@ -141,6 +141,8 @@ def train_model(model, tokenizer, train_dataset, val_dataset, output_dir="./qwen
         gradient_checkpointing=True,  # Enable gradient checkpointing to save memory
         dataloader_num_workers=0,  # Disable parallel loading to save memory
         max_grad_norm=1.0,
+        disable_tqdm=False,
+        logging_first_step=False,
     )
     
     # Data collator
