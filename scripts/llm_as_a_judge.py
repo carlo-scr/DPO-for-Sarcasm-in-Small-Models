@@ -501,7 +501,7 @@ def generate_dpo_preference_data(hf_token, test_csv_path='data/splits/isarcasm_t
 
 if __name__ == "__main__":
     # Set your HuggingFace token
-    HF_TOKEN = "hf_YOUR_TOKEN_HERE"
+    HF_TOKEN = os.environ.get("HF_TOKEN")
     
     # Generate DPO preference data
     dpo_dataset, all_pairs = generate_dpo_preference_data(HF_TOKEN)
