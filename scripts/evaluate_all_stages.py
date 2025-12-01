@@ -219,8 +219,8 @@ def main():
     print(f"✓ Loaded: {len(df_test)} samples")
     
     # Sample 1000 examples for faster evaluation (500 from each class for balance)
-    sarc_samples = df_test[df_test['class'] == 'sarc'].sample(n=min(500, (df_test['class'] == 'sarc').sum()), random_state=42)
-    notsarc_samples = df_test[df_test['class'] == 'notsarc'].sample(n=min(500, (df_test['class'] == 'notsarc').sum()), random_state=42)
+    sarc_samples = df_test[df_test['class'] == 'sarc'].sample(n=min(250, (df_test['class'] == 'sarc').sum()), random_state=42)
+    notsarc_samples = df_test[df_test['class'] == 'notsarc'].sample(n=min(250, (df_test['class'] == 'notsarc').sum()), random_state=42)
     df_test = pd.concat([sarc_samples, notsarc_samples]).sample(frac=1, random_state=42).reset_index(drop=True)
     
     print(f"✓ Sampled {len(df_test)} examples for evaluation (balanced)")
@@ -273,7 +273,7 @@ def main():
     print(f"\n{'='*70}")
     print("STAGE 3: After DPO (Phase 2 - GEN preference refinement)")
     print("="*70)
-    dpo_path = "models/dpo_enhanced"
+    dpo_path = "models/dpo_mistakes"
     if os.path.exists(dpo_path):
         try:
             model, tokenizer = load_model_and_tokenizer(dpo_path, is_adapter=True, base_model_name=base_model_name)

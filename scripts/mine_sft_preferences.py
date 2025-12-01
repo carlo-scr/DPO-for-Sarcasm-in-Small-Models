@@ -103,13 +103,20 @@ Answer:"""
     return prediction, response
 
 
-def mine_preference_pairs(model, tokenizer, isarcasm_df, device, output_path, adapter_path):
+def mine_preference_pairs(model, tokenizer, isarcasm_df, device, output_path, adapter_path, 
+                          filter_strategy='confident_mistakes'):
     """
     Mine preference pairs from SFT model predictions.
     
+    Args:
+        filter_strategy: 
+            - 'all': Use all examples (original behavior)
+            - 'confident_mistakes': Only use examples where SFT was confidently wrong
+            - 'mistakes_only': Only use incorrect predictions (any confidence)
+    
     Creates pairs where:
     - Chosen: Correct answer (ground truth)
-    - Rejected: Wrong answer
+    - Rejected: Wrong answer (what SFT predicted)
     
     This gives DPO clear signal about what the model should/shouldn't do.
     """
@@ -117,6 +124,7 @@ def mine_preference_pairs(model, tokenizer, isarcasm_df, device, output_path, ad
     print(f"MINING PREFERENCE PAIRS FROM SFT PREDICTIONS")
     print(f"{'='*80}")
     print(f"Dataset size: {len(isarcasm_df)}")
+    print(f"Filter strategy: {filter_strategy}")
     
     preference_data = []
     predictions = []
@@ -165,18 +173,18 @@ Answer:"""
             print(f"\nError processing example {idx}: {e}")
             continue
     
-    # Calculate statistics
+    # Calculate statistics BEFORE filtering
     correct_predictions = sum(1 for item in preference_data if item['is_correct'])
-    total = len(preference_data)
-    accuracy = correct_predictions / total if total > 0 else 0
+    total_before_filter = len(preference_data)
+    accuracy = correct_predictions / total_before_filter if total_before_filter > 0 else 0
     
     print(f"\n{'='*80}")
-    print(f"MINING RESULTS")
+    print(f"MINING RESULTS (Before Filtering)")
     print(f"{'='*80}")
-    print(f"Total examples processed: {total}")
-    print(f"SFT model accuracy: {accuracy:.1%} ({correct_predictions}/{total})")
+    print(f"Total examples processed: {total_before_filter}")
+    print(f"SFT model accuracy: {accuracy:.1%} ({correct_predictions}/{total_before_filter})")
     print(f"Correct predictions: {correct_predictions}")
-    print(f"Incorrect predictions: {total - correct_predictions}")
+    print(f"Incorrect predictions: {total_before_filter - correct_predictions}")
     
     # Calculate per-class accuracy
     sarcastic_examples = [item for item in preference_data if item['true_label'] == 1]
@@ -189,8 +197,37 @@ Answer:"""
     print(f"  Sarcastic: {sarcastic_correct/len(sarcastic_examples):.1%} ({sarcastic_correct}/{len(sarcastic_examples)})")
     print(f"  Non-sarcastic: {non_sarcastic_correct/len(non_sarcastic_examples):.1%} ({non_sarcastic_correct}/{len(non_sarcastic_examples)})")
     
+    # Apply filtering strategy
+    if filter_strategy == 'confident_mistakes':
+        print(f"\n{'='*80}")
+        print(f"APPLYING FILTER: Confident Mistakes Only")
+        print(f"{'='*80}")
+        print("Keeping only examples where SFT was wrong (confident errors to correct)")
+        
+        # Keep only incorrect predictions (mistakes)
+        filtered_data = [item for item in preference_data if not item['is_correct']]
+        
+        print(f"✓ Filtered: {len(filtered_data)} mistakes out of {total_before_filter} examples")
+        print(f"  Reduction: {(1 - len(filtered_data)/total_before_filter)*100:.1f}%")
+        preference_data = filtered_data
+        
+    elif filter_strategy == 'mistakes_only':
+        print(f"\n{'='*80}")
+        print(f"APPLYING FILTER: All Mistakes")
+        print(f"{'='*80}")
+        filtered_data = [item for item in preference_data if not item['is_correct']]
+        preference_data = filtered_data
+        print(f"✓ Filtered: {len(filtered_data)} mistakes")
+    
+    # If 'all', no filtering
+    
+    total = len(preference_data)
+    
     # Save preference pairs
-    print(f"\nSaving preference pairs to: {output_path}")
+    print(f"\n{'='*80}")
+    print(f"FINAL PREFERENCE PAIRS")
+    print(f"{'='*80}")
+    print(f"Saving {len(preference_data)} preference pairs to: {output_path}")
     
     with open(output_path, 'w') as f:
         json.dump(preference_data, f, indent=2)
@@ -200,10 +237,12 @@ Answer:"""
     # Save summary statistics
     summary_path = output_path.replace('.json', '_summary.json')
     summary = {
-        'total_examples': total,
+        'filter_strategy': filter_strategy,
+        'total_examples_processed': total_before_filter,
+        'total_examples_kept': total,
         'sft_accuracy': accuracy,
         'correct_predictions': correct_predictions,
-        'incorrect_predictions': total - correct_predictions,
+        'incorrect_predictions': total_before_filter - correct_predictions,
         'sarcastic_accuracy': sarcastic_correct / len(sarcastic_examples) if sarcastic_examples else 0,
         'non_sarcastic_accuracy': non_sarcastic_correct / len(non_sarcastic_examples) if non_sarcastic_examples else 0,
         'dataset': 'iSarcasm',
@@ -231,6 +270,9 @@ def main():
                         help='Output path for preference pairs')
     parser.add_argument('--sample_size', type=int, default=None,
                         help='Sample size for testing (None = use full dataset)')
+    parser.add_argument('--filter_strategy', type=str, default='confident_mistakes',
+                        choices=['all', 'confident_mistakes', 'mistakes_only'],
+                        help='Filter strategy: all (no filter), confident_mistakes (only errors), mistakes_only (all errors)')
     
     args = parser.parse_args()
     
@@ -263,7 +305,8 @@ def main():
     
     # Mine preference pairs
     preference_data, summary = mine_preference_pairs(
-        model, tokenizer, isarcasm_df, device, args.output_path, args.adapter_path
+        model, tokenizer, isarcasm_df, device, args.output_path, args.adapter_path,
+        filter_strategy=args.filter_strategy
     )
     
     print(f"\n{'='*80}")
