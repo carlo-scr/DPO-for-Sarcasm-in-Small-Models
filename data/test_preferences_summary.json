@@ -1,0 +1,11 @@
+{
+  "total_examples": 100,
+  "sft_accuracy": 0.35,
+  "correct_predictions": 35,
+  "incorrect_predictions": 65,
+  "sarcastic_accuracy": 0.8620689655172413,
+  "non_sarcastic_accuracy": 0.14084507042253522,
+  "dataset": "iSarcasm",
+  "base_model": "Qwen2.5-0.5B-Instruct",
+  "sft_adapter": "/Users/carloschreiber/Desktop/Uni/Quarter 1/CS229 - Machine Learning/Sarcasm/models/sft"
+}

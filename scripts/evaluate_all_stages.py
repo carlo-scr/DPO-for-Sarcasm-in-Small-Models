@@ -273,7 +273,7 @@ def main():
     print(f"\n{'='*70}")
     print("STAGE 3: After DPO (Phase 2 - GEN preference refinement)")
     print("="*70)
-    dpo_path = "models/dpo_enhanced"
+    dpo_path = "models/dpo_mistakes"
     if os.path.exists(dpo_path):
         try:
             model, tokenizer = load_model_and_tokenizer(dpo_path, is_adapter=True, base_model_name=base_model_name)
