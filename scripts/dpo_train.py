@@ -1,6 +1,6 @@
 """
 Direct Preference Optimization (DPO) for sarcasm detection - Phase 2.
-This script uses iSarcasm dataset for preference alignment after SFT on SARC.
+This script uses SARC dataset for preference alignment after SFT on SARC.
 
 ENHANCED VERSION - Quick Fixes Applied:
 1. Richer preference pairs with explicit reasoning
@@ -23,15 +23,15 @@ from trl import DPOTrainer, DPOConfig
 import json 
 def prepare_dpo_dataset(train_csv_path):
     """
-    Prepare iSarcasm TRAINING dataset with enhanced preference pairs.
+    Prepare SARC TRAINING dataset with enhanced preference pairs.
     
     Args:
-        train_csv_path: Path to training split CSV (data/splits/isarcasm_train.csv)
+        train_csv_path: Path to training split CSV (data/SARC7splits/dpo_data.csv)
     
     Returns:
         Dataset with prompt/chosen/rejected pairs
     """
-    print(f"Loading iSarcasm training data from: {train_csv_path}")
+    print(f"Loading SARC training data from: {train_csv_path}")
     df = pd.read_csv(train_csv_path, index_col=0)
     
     print(f"Training samples: {len(df)}")
@@ -197,15 +197,15 @@ def train_dpo(csv_path, output_dir="./qwen_sarcasm_dpo", adapter_path=None):
     return dpo_trainer
 
 def main():
-    # PHASE 2: DPO on iSarcasm dataset
-    train_csv_path = "data/splits/isarcasm_train.csv"  # Pre-split training data
+    # PHASE 2: DPO on SARC dataset
+    train_csv_path = "data/SARC/splits/dpo_data.csv"  # Pre-split training data
     sft_adapter_path = "models/sft"  # From Phase 1 SFT
     output_dir = "models/dpo_enhanced"  # Enhanced version
     
     print("="*70)
     print("PHASE 2: Direct Preference Optimization (DPO)")
     print("="*70)
-    print("Strategy: Refine SARC-trained model with iSarcasm preferences")
+    print("Strategy: Refine SARC-trained model with SARC preferences")
     print(f"Training data: {train_csv_path}")
     print(f"Base model: {sft_adapter_path}")
     print("="*70)
@@ -223,8 +223,8 @@ def main():
     print(f"Phase 1 (SFT): {sft_adapter_path}")
     print(f"Phase 2 (DPO): {output_dir}")
     print("\nWorkflow Summary:")
-    print("  1. SFT on SARC → Learn general sarcasm patterns")
-    print("  2. DPO on iSarcasm → Refine with expert preferences")
+    print("  1. SFT on SARC-1 → Learn general sarcasm patterns")
+    print("  2. DPO on SARC-2 → Refine with preferences")
     print("="*70)
 
 if __name__ == "__main__":

@@ -174,7 +174,7 @@ def main():
     model_name = "Qwen/Qwen2.5-0.5B-Instruct"
     
     # PHASE 1: Train on SARC dataset (large volume for pattern learning)
-    sarc_path = "data/SARC/train-balanced-sarcasm.csv"
+    sarc_path = "data/SARC/splits/sft_data.csv"
     output_dir = "models/sft"
     
     print("="*70)
