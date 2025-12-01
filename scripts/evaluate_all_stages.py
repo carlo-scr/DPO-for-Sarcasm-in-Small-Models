@@ -112,35 +112,59 @@ def get_prediction(model, tokenizer, text, max_new_tokens=50):
     
     return prediction, response  # Return both prediction and raw response for debugging
 
-def get_gpt4_prediction(client, text, model="gpt-4"):
-    """Get GPT-4 prediction for a single text."""
-    try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant that identifies sarcasm in text. Answer only with 'Yes' or 'No'."},
-                {"role": "user", "content": f"Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: {text}\n\nAnswer:"}
-            ],
-            temperature=0,
-            max_tokens=10
-        )
-        
-        raw_response = response.choices[0].message.content.strip()
-        response_clean = raw_response.lower()
-        
-        # Parse response
-        if 'yes' in response_clean:
-            prediction = 1
-        elif 'no' in response_clean:
-            prediction = 0
-        else:
-            prediction = -1
-        
-        return prediction, raw_response
+def get_gpt4_prediction(client, text, model="gpt-4", max_retries=3):
+    """Get GPT-4 prediction for a single text. Retries if response is unclear."""
     
-    except Exception as e:
-        print(f"Error with GPT-4 API: {e}")
-        return -1, str(e)
+    # Strict system prompt that forces Yes/No
+    system_prompt = """You are a sarcasm detector. You MUST respond with EXACTLY one word: either "Yes" or "No".
+- "Yes" = the text IS sarcastic
+- "No" = the text is NOT sarcastic
+Do not explain. Do not add any other words. Just "Yes" or "No"."""
+    
+    user_prompt = f"Is this text sarcastic?\n\n{text}"
+    
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0,
+                max_tokens=5  # Reduced - only need Yes/No
+            )
+            
+            raw_response = response.choices[0].message.content.strip()
+            response_clean = raw_response.lower().strip('.')
+            
+            # Strict parsing - must be exactly "yes" or "no"
+            if response_clean == 'yes':
+                return 1, raw_response
+            elif response_clean == 'no':
+                return 0, raw_response
+            
+            # If unclear and we have retries left, try again with even stricter prompt
+            if attempt < max_retries - 1:
+                user_prompt = f"Is this text sarcastic? Reply with ONLY 'Yes' or 'No', nothing else.\n\n{text}"
+                continue
+            
+            # Last resort: check if yes/no appears anywhere
+            if 'yes' in response_clean:
+                return 1, raw_response
+            elif 'no' in response_clean:
+                return 0, raw_response
+            
+            return -1, raw_response
+        
+        except Exception as e:
+            print(f"Error with GPT-4 API: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(1)  # Wait before retry
+                continue
+            return -1, str(e)
+    
+    return -1, "Max retries exceeded"
 
 def evaluate_gpt4(client, df, model_name="GPT-4", model="gpt-4", sample_size=None):
     """Evaluate GPT-4 model."""
