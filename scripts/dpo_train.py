@@ -171,7 +171,7 @@ def train_dpo(csv_path, output_dir="./qwen_sarcasm_dpo", adapter_path=None):
         gradient_checkpointing=True,
         max_length=512,  # Increased to accommodate richer responses
         max_prompt_length=256,
-        beta=0.5,  # ENHANCED: Increased from 0.1 to 0.5 for stronger preference signal
+        beta=0.2,  # ENHANCED: Increased from 0.1 to 0.5 for stronger preference signal
         # Higher beta = model learns more aggressively from preference differences
     )
     
