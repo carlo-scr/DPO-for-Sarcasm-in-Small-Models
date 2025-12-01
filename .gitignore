@@ -1,6 +1,9 @@
 # Ignore SARC dataset files
 data/SARC/
 
+# Environment variables (API keys)
+.env
+
 # Ignore all trained models
 models/
 qwen_sarcasm_dpo_enhanced/
