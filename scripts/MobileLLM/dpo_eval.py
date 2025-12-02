@@ -1,6 +1,7 @@
 """
 Quick DPO evaluation script for MobileLLM models.
 Tests the DPO model on the GEN test split to verify it hasn't regressed.
+Uses a fixed seed and 500 balanced samples for reproducibility.
 """
 
 import torch
@@ -10,6 +11,10 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 from tqdm import tqdm
 import os
+
+# Fixed seed for reproducibility
+EVAL_SEED = 42
+EVAL_SAMPLE_SIZE = 500  # 250 per class
 
 
 def evaluate_model(model, tokenizer, test_df, device, model_name="Model"):
@@ -95,8 +100,20 @@ def main():
     
     # Load test data
     print(f"Loading test data from: {test_data_path}")
-    test_df = pd.read_csv(test_data_path)
-    print(f"Test samples: {len(test_df)}")
+    full_test_df = pd.read_csv(test_data_path)
+    print(f"Full test set: {len(full_test_df)} samples")
+    
+    # Create balanced sample with fixed seed
+    sarc_df = full_test_df[full_test_df['class'] == 'sarc']
+    notsarc_df = full_test_df[full_test_df['class'] == 'notsarc']
+    
+    samples_per_class = EVAL_SAMPLE_SIZE // 2
+    sarc_sample = sarc_df.sample(n=min(samples_per_class, len(sarc_df)), random_state=EVAL_SEED)
+    notsarc_sample = notsarc_df.sample(n=min(samples_per_class, len(notsarc_df)), random_state=EVAL_SEED)
+    
+    test_df = pd.concat([sarc_sample, notsarc_sample]).sample(frac=1, random_state=EVAL_SEED).reset_index(drop=True)
+    print(f"Balanced eval set: {len(test_df)} samples (seed={EVAL_SEED})")
+    print(f"  Sarcastic: {len(sarc_sample)}, Non-sarcastic: {len(notsarc_sample)}")
     
     device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"Using device: {device}")
@@ -139,19 +156,35 @@ def main():
         print(f"\n⚠️  SFT model not found at {sft_model_path}")
     
     # Evaluate DPO model
-    if os.path.exists(dpo_model_path):
+    # DPO was trained on merged SFT model saved to disk
+    # So we load merged SFT as base, then add DPO LoRA
+    merged_sft_path = "models/mobilellm_sft_merged"
+    if not os.path.exists(merged_sft_path):
+        merged_sft_path = os.path.join("..", merged_sft_path)
+    
+    if os.path.exists(dpo_model_path) and os.path.exists(merged_sft_path):
         print("\n" + "="*60)
-        print("Loading DPO model...")
-        base_for_dpo = AutoModelForCausalLM.from_pretrained(
-            base_model_name,
+        print("Loading DPO model (merged SFT + DPO LoRA)...")
+        print(f"  Base: {merged_sft_path}")
+        print(f"  Adapter: {dpo_model_path}")
+        
+        # Load merged SFT as base
+        merged_sft = AutoModelForCausalLM.from_pretrained(
+            merged_sft_path,
             torch_dtype=torch.float16 if device == "cuda" else torch.float32,
             device_map="auto",
             trust_remote_code=True
         )
-        dpo_model = PeftModel.from_pretrained(base_for_dpo, dpo_model_path)
+        
+        # Add DPO LoRA adapter on top
+        dpo_model = PeftModel.from_pretrained(merged_sft, dpo_model_path)
+        
         results['dpo'] = evaluate_model(dpo_model, tokenizer, test_df, device, "DPO MobileLLM")
-        del dpo_model, base_for_dpo
+        del dpo_model, merged_sft
         torch.cuda.empty_cache() if torch.cuda.is_available() else None
+    elif os.path.exists(dpo_model_path):
+        print(f"\n⚠️  Merged SFT model not found at {merged_sft_path}")
+        print("    Run DPO training first to create merged SFT model")
     else:
         print(f"\n⚠️  DPO model not found at {dpo_model_path}")
     

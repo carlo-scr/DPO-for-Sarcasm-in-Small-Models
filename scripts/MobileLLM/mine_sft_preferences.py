@@ -18,17 +18,17 @@ import numpy as np
 
 def mine_preferences(
     sft_model_path="models/mobilellm_sft",
-    data_path="data/splits/gen_train.csv",
-    output_path="data/mobilellm_preferences.json",
-    sample_size=None,
+    data_path="data/isarcasm2022.csv",
+    output_path="data/mobilellm_sft_mistakes/sft_mistakes_only.json",
+    sample_size=500,
     filter_strategy="all"  # "all", "mistakes_only", "confident_mistakes"
 ):
     """
-    Run SFT model on training data and create preference pairs.
+    Run SFT model on iSarcasm data and create preference pairs.
     
     Args:
         sft_model_path: Path to SFT model
-        data_path: Path to training data
+        data_path: Path to iSarcasm data (different from SFT training data!)
         output_path: Where to save preference pairs
         sample_size: Number of samples to process (None for all)
         filter_strategy: How to filter pairs:
@@ -48,16 +48,30 @@ def mine_preferences(
     print(f"MINING PREFERENCE PAIRS FROM MobileLLM SFT MODEL")
     print(f"{'='*80}")
     print(f"SFT Model: {sft_model_path}")
-    print(f"Data: {data_path}")
+    print(f"Data: {data_path} (iSarcasm - NEW data, not used in SFT!)")
     print(f"Output: {output_path}")
     print(f"Filter Strategy: {filter_strategy}")
     print(f"{'='*80}\n")
     
-    # Load data
+    # Load iSarcasm data
     df = pd.read_csv(data_path)
     
-    if sample_size and len(df) > sample_size:
-        df = df.sample(n=sample_size, random_state=42)
+    # iSarcasm has 'tweet' and 'sarcastic' columns
+    print(f"iSarcasm dataset: {len(df)} samples")
+    print(f"  Sarcastic: {df['sarcastic'].sum()}")
+    print(f"  Non-sarcastic: {len(df) - df['sarcastic'].sum()}")
+    
+    # Balance the dataset
+    if sample_size:
+        sarc_df = df[df['sarcastic'] == 1]
+        notsarc_df = df[df['sarcastic'] == 0]
+        samples_per_class = sample_size // 2
+        
+        sarc_sample = sarc_df.sample(n=min(samples_per_class, len(sarc_df)), random_state=42)
+        notsarc_sample = notsarc_df.sample(n=min(samples_per_class, len(notsarc_df)), random_state=42)
+        
+        df = pd.concat([sarc_sample, notsarc_sample]).sample(frac=1, random_state=42).reset_index(drop=True)
+        print(f"\nBalanced sample: {len(df)} samples ({len(sarc_sample)} sarc, {len(notsarc_sample)} not-sarc)")
     
     print(f"Processing {len(df)} samples...")
     
@@ -85,8 +99,8 @@ def mine_preferences(
     
     with torch.no_grad():
         for _, row in tqdm(df.iterrows(), total=len(df), desc="Mining"):
-            text = row['text']
-            true_label = 1 if row['class'] == 'sarc' else 0
+            text = row['tweet']  # iSarcasm uses 'tweet' column
+            true_label = row['sarcastic']  # iSarcasm uses 'sarcastic' column
             
             prompt = f"""Is the following text sarcastic? Answer with only 'Yes' or 'No'.
 
@@ -192,11 +206,11 @@ Answer:"""
 def main():
     import argparse
     
-    parser = argparse.ArgumentParser(description="Mine preference pairs from MobileLLM SFT model")
+    parser = argparse.ArgumentParser(description="Mine preference pairs from MobileLLM SFT model on iSarcasm")
     parser.add_argument("--sft_model", type=str, default="models/mobilellm_sft", help="Path to SFT model")
-    parser.add_argument("--data", type=str, default="data/splits/gen_train.csv", help="Path to training data")
-    parser.add_argument("--output", type=str, default="data/mobilellm_preferences.json", help="Output path")
-    parser.add_argument("--sample_size", type=int, default=None, help="Number of samples to process")
+    parser.add_argument("--data", type=str, default="data/isarcasm2022.csv", help="Path to iSarcasm data")
+    parser.add_argument("--output", type=str, default="data/mobilellm_sft_mistakes/sft_mistakes_only.json", help="Output path")
+    parser.add_argument("--sample_size", type=int, default=500, help="Number of balanced samples to process")
     parser.add_argument("--filter", type=str, default="confident_mistakes", 
                        choices=["all", "mistakes_only", "confident_mistakes"],
                        help="Filter strategy for preference pairs")

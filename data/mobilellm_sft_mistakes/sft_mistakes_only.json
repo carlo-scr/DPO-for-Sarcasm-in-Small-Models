@@ -1,0 +1,2234 @@
+[
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: me: *finishes book 100 of the year, gets excited to relax and watch trash tv the rest of the year*\r\n\r\nalso me: *starts book 101 ten minutes later*\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "me: *finishes book 100 of the year, gets excited to relax and watch trash tv the rest of the year*\r\n\r\nalso me: *starts book 101 ten minutes later*",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Ipswich Town 2020/21 Home Shirt \ud83d\udd35\u26aa\r\n\r\nUEFA Cup 40 Year anniversary.\r\n\r\n#ITFC https://t.co/N95ktMkKBJ\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Ipswich Town 2020/21 Home Shirt \ud83d\udd35\u26aa\r\n\r\nUEFA Cup 40 Year anniversary.\r\n\r\n#ITFC https://t.co/N95ktMkKBJ",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: missed this the first time round but a conversation I really wanted to see happen , great article @hkatewilliams  https://t.co/wH0doPQlb1\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "missed this the first time round but a conversation I really wanted to see happen , great article @hkatewilliams  https://t.co/wH0doPQlb1",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Trader Joe's Candy Cane Joe-Joes are pure crack and I cave to them every year.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Trader Joe's Candy Cane Joe-Joes are pure crack and I cave to them every year.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Just signed up for Apple's Ping, told it I like 'classical' and it points me towards Lady Gaga. It takes a certain genius to be this crap.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Just signed up for Apple's Ping, told it I like 'classical' and it points me towards Lady Gaga. It takes a certain genius to be this crap.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Been thinking about the vegan burger from kfc since Tuesday and I\u2019m so mad the closest one that serves it is fuckin Wigan.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Been thinking about the vegan burger from kfc since Tuesday and I\u2019m so mad the closest one that serves it is fuckin Wigan.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Do I draw Greyscale/Dragonsbayne stuff or do I try and get people to play Garticphone with me tonight? Decisions, decisions...\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Do I draw Greyscale/Dragonsbayne stuff or do I try and get people to play Garticphone with me tonight? Decisions, decisions...",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I made a thing. My first attempt at mixed media, steampunk style as a gift to @bbmatt 14 years of not killing each other. I'm kind of happy with this one. #anniversary #happy #mixedmedia #steampunk #myart https://t.co/NRiuzE3rfu\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I made a thing. My first attempt at mixed media, steampunk style as a gift to @bbmatt 14 years of not killing each other. I'm kind of happy with this one. #anniversary #happy #mixedmedia #steampunk #myart https://t.co/NRiuzE3rfu",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: James Harden is allowed to travel every time he drives apparently\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "James Harden is allowed to travel every time he drives apparently",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Great opportunity for a position at ZSL #sciencejobs #researchjobs #postdocjobs #graduatejobs #animalbehaviour https://t.co/hVud29qSh4\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Great opportunity for a position at ZSL #sciencejobs #researchjobs #postdocjobs #graduatejobs #animalbehaviour https://t.co/hVud29qSh4",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: If someone's not willing to fight for you then they don't deserve to be kept around #moveon\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "If someone's not willing to fight for you then they don't deserve to be kept around #moveon",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Oops I watched a video about a service dog, started to cry, and now cannot stop hugging my pup so I\u2019m just going to have to call it a day\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Oops I watched a video about a service dog, started to cry, and now cannot stop hugging my pup so I\u2019m just going to have to call it a day",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Once you go Fever Tree you never go back\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Once you go Fever Tree you never go back",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: not asda having only one checkout lane open i\u2019ve been standing in this line for like 20 minutes with my food slowly defrosting without people social distancing around me \ud83d\udc80\ud83d\udc80\ud83d\udc80 @AsdaServiceTeam\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "not asda having only one checkout lane open i\u2019ve been standing in this line for like 20 minutes with my food slowly defrosting without people social distancing around me \ud83d\udc80\ud83d\udc80\ud83d\udc80 @AsdaServiceTeam",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I haven\u2019t worked since March 18th, tomorrow I start my new job!! I am so excited \ud83e\udd29\ud83e\udd29\ud83e\udd29\ud83e\udd29\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I haven\u2019t worked since March 18th, tomorrow I start my new job!! I am so excited \ud83e\udd29\ud83e\udd29\ud83e\udd29\ud83e\udd29",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Every time I get a symptom I strongly associate with pregnancy I also get my brain going through all the shit that happened around that to deal with as well as said symptom.\r\n\r\nBirth trauma, leaving us to deal with 100% tongue tied baby untreated, the general no support of lockdown\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Every time I get a symptom I strongly associate with pregnancy I also get my brain going through all the shit that happened around that to deal with as well as said symptom.\r\n\r\nBirth trauma, leaving us to deal with 100% tongue tied baby untreated, the general no support of lockdown",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @TalkTalk how can you allow someone to be without internet for three days in 2019? Told I have to wait 72 hours so managers can check if other customers are effected before resolving the issue @guardianmoney\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@TalkTalk how can you allow someone to be without internet for three days in 2019? Told I have to wait 72 hours so managers can check if other customers are effected before resolving the issue @guardianmoney",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Celebrating the Year of the Ox in Pingtung County, South Taiwan.  Just off for a scooter ride.  (If this is my first and last twit - doh!)\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Celebrating the Year of the Ox in Pingtung County, South Taiwan.  Just off for a scooter ride.  (If this is my first and last twit - doh!)",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: My tattoo got cancelled and I hooked up with my ex, how\u2019s your week going?\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "My tattoo got cancelled and I hooked up with my ex, how\u2019s your week going?",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i love smoothies bc u can really eat half a bag of spinach and just not taste it at all\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i love smoothies bc u can really eat half a bag of spinach and just not taste it at all",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: What a Race ! #sarcastic #WTF1 https://t.co/zRtL5alnoT\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "What a Race ! #sarcastic #WTF1 https://t.co/zRtL5alnoT",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I love leaving the doctors office in tears. I need this kid to just decide to leave my body so we can be done and home together.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "I love leaving the doctors office in tears. I need this kid to just decide to leave my body so we can be done and home together.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I love it when drunk, inconsiderate flatmates come back and start climbing on the roof #istillhaveexams #tryingtosleep\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "I love it when drunk, inconsiderate flatmates come back and start climbing on the roof #istillhaveexams #tryingtosleep",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: you know what\u2019s a novel concept? rapists and sexual assaulters not only ruin the lives of their victims but also THEIR OWN LIVES. yeah. not the victims testifying. maybe if you didn\u2019t want rape accusations then DON\u2019T RAPE. also a novel concept.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "you know what\u2019s a novel concept? rapists and sexual assaulters not only ruin the lives of their victims but also THEIR OWN LIVES. yeah. not the victims testifying. maybe if you didn\u2019t want rape accusations then DON\u2019T RAPE. also a novel concept.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Someone should\u2019ve had me committed the day I decided to buy a pair of non-stretch denim jeans\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Someone should\u2019ve had me committed the day I decided to buy a pair of non-stretch denim jeans",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Happy Birthday to Chris Lowe of Pet Shop Boys. Your music is the backbone of my existence. #chrislowe #happybirthdaychrislowe #petshopboys https://t.co/pqYRY6HfdB\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Happy Birthday to Chris Lowe of Pet Shop Boys. Your music is the backbone of my existence. #chrislowe #happybirthdaychrislowe #petshopboys https://t.co/pqYRY6HfdB",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Highway signs where they stretch the state shape to fit the numbers in make me irrationally angry\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Highway signs where they stretch the state shape to fit the numbers in make me irrationally angry",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: an 8 year old just complimented my shoes in passing, what does that mean\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "an 8 year old just complimented my shoes in passing, what does that mean",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: \u201cOven ready, shove it in the microwave\u201d and this man is our PM\u270c\ud83c\udffc\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "\u201cOven ready, shove it in the microwave\u201d and this man is our PM\u270c\ud83c\udffc",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Wander Franco closes out an 11-pitch at-bat with a two-run homer off of Houck. \r\n\r\n3-1 Rays in the sixth.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Wander Franco closes out an 11-pitch at-bat with a two-run homer off of Houck. \r\n\r\n3-1 Rays in the sixth.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @JohnJBrea @lad_lew @Ladyblueclr @realDonaldTrump It's probably something closer to Xenophobia. Which is someone hating someone else just because they're foreign. I mean, you are an English teacher, aren't you? Figured you might know that.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@JohnJBrea @lad_lew @Ladyblueclr @realDonaldTrump It's probably something closer to Xenophobia. Which is someone hating someone else just because they're foreign. I mean, you are an English teacher, aren't you? Figured you might know that.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Idk how ppl discuss their mental health issues openly on the internet\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Idk how ppl discuss their mental health issues openly on the internet",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: seonghwa is still one of the most gorgeous men ive ever seen\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "seonghwa is still one of the most gorgeous men ive ever seen",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: hug your loved ones right every single day. life is not promised to us so make every second count\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "hug your loved ones right every single day. life is not promised to us so make every second count",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Just read Annie on My Mind for the first time\u2026\ud83e\udd7a\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Just read Annie on My Mind for the first time\u2026\ud83e\udd7a",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Sherlock Sherlock Sherlock Sherlock Sherlock Sherlock\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Sherlock Sherlock Sherlock Sherlock Sherlock Sherlock",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: It was the jerseys\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "It was the jerseys",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @ASvechnicock @GoldenKnights ppl really don't know what a joke is lmao\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@ASvechnicock @GoldenKnights ppl really don't know what a joke is lmao",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Off to london today for the Aurora Programme! See all you girl bosses there! \ud83d\udc81\ud83c\udffd\u200d\u2640\ufe0f\ud83d\udc95 #Iamaurora\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Off to london today for the Aurora Programme! See all you girl bosses there! \ud83d\udc81\ud83c\udffd\u200d\u2640\ufe0f\ud83d\udc95 #Iamaurora",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Why is this 30 yr old man trying to flirt w/ me at this wedding and talking about getting away with dating younger girls. Sir I will call the authorities\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Why is this 30 yr old man trying to flirt w/ me at this wedding and talking about getting away with dating younger girls. Sir I will call the authorities",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @DarkenerWoW @wochinimen @MissPurplePixie shit healer\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@DarkenerWoW @wochinimen @MissPurplePixie shit healer",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i almost forgot to tweet about jason bateman today\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i almost forgot to tweet about jason bateman today",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i just saw the loveliest cat on the way home :)\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i just saw the loveliest cat on the way home :)",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i just overheard this bunch of children behind me yell \u201cDON\u2019T LOOK AT THE ENDERMAN\u201d\u2026\u2026internally yelling as an mcyt mod\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i just overheard this bunch of children behind me yell \u201cDON\u2019T LOOK AT THE ENDERMAN\u201d\u2026\u2026internally yelling as an mcyt mod",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Whoever\u2019s toddler ass sprayed the entire toilet backstage, I hope you stub your toe and bite your tongue really hard. also you were clearly dehydrated, go drink some damn water like an adult\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Whoever\u2019s toddler ass sprayed the entire toilet backstage, I hope you stub your toe and bite your tongue really hard. also you were clearly dehydrated, go drink some damn water like an adult",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I just wanna do hot girl shit with my friends\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I just wanna do hot girl shit with my friends",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Football\u2019s back. NFL\u2019s back. James Wan\u2019s back with a horror. This weekend is set up for absolute glory\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Football\u2019s back. NFL\u2019s back. James Wan\u2019s back with a horror. This weekend is set up for absolute glory",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: too many words, not enough pictures\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "too many words, not enough pictures",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: For so long Americans condemned greedy businessmen but made that their sole reason to elect #Trump. #POTUS #Greed\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "For so long Americans condemned greedy businessmen but made that their sole reason to elect #Trump. #POTUS #Greed",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Wow we aren\u2019t the favourites this time? https://t.co/qKj4fKvYm3\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Wow we aren\u2019t the favourites this time? https://t.co/qKj4fKvYm3",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I've just seen the news about Sarah Harding and genuinely can't believe it. So sad. \r\n\r\nSo so so young.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I've just seen the news about Sarah Harding and genuinely can't believe it. So sad. \r\n\r\nSo so so young.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: At least once a day someone around me sits down at their desk and quietly sighs \"okay\" at their computer\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "At least once a day someone around me sits down at their desk and quietly sighs \"okay\" at their computer",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @PetsatHome racial stereotyping is the problem. Please listen and retrain your staff. https://t.co/UvLkji9s5H\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@PetsatHome racial stereotyping is the problem. Please listen and retrain your staff. https://t.co/UvLkji9s5H",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: CLB cover art makes me want to pound my knees with a hammer.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "CLB cover art makes me want to pound my knees with a hammer.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Doggo owners have started walking the dogs around the technology park I work on &amp; I can see them all from my desk. \r\n\r\nThis is the only positive of working from the office\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Doggo owners have started walking the dogs around the technology park I work on &amp; I can see them all from my desk. \r\n\r\nThis is the only positive of working from the office",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @JesseEagleman10 Thank you for your service and welcome back to the Land of the Free!   Bet you have some great stories!  \ud83c\uddfa\ud83c\uddf8\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@JesseEagleman10 Thank you for your service and welcome back to the Land of the Free!   Bet you have some great stories!  \ud83c\uddfa\ud83c\uddf8",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: #ripcharliewatts Absolute rock and roll legend #charliewatts\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "#ripcharliewatts Absolute rock and roll legend #charliewatts",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: who needs an alarm when u can have the low rumbling voice of a stranger to wake u up in the morning \ud83e\udd70\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "who needs an alarm when u can have the low rumbling voice of a stranger to wake u up in the morning \ud83e\udd70",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I\u2019ve just spent 6 hours watching minecraft streamers instead of doing my homework I have no regrets\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I\u2019ve just spent 6 hours watching minecraft streamers instead of doing my homework I have no regrets",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Pharmacy Benefit Managers are the first line of defense against rising drug costs. Unnecessary and burdensome government regulations make it harder for them to save you money. @WiltonSimpson @ChrisSprowls\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Pharmacy Benefit Managers are the first line of defense against rising drug costs. Unnecessary and burdensome government regulations make it harder for them to save you money. @WiltonSimpson @ChrisSprowls",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: was not aware that Crocs were appropriate business casual attire.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "was not aware that Crocs were appropriate business casual attire.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: nah fuck u and all ur issues\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "nah fuck u and all ur issues",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: So, very delayed flight from Bristol to Edinburgh @easyJet, trademark vagueness from staff, with a chronic lack of empathy to boot (despite me travelling with three young children)... now, time to feed our family with \u00a33 vouchers (at airport prices!) #bollocks\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "So, very delayed flight from Bristol to Edinburgh @easyJet, trademark vagueness from staff, with a chronic lack of empathy to boot (despite me travelling with three young children)... now, time to feed our family with \u00a33 vouchers (at airport prices!) #bollocks",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Always here if anyone needs to talk during this time, if you need someone to listen please message me x\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Always here if anyone needs to talk during this time, if you need someone to listen please message me x",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: why are the olympics worried about athletes having too much sex when the curling teams don't even compete in the summer games\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "why are the olympics worried about athletes having too much sex when the curling teams don't even compete in the summer games",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: it\u2019s been 3 years, i know i will sob the second they walk on stage https://t.co/qCuo6I9SQq\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "it\u2019s been 3 years, i know i will sob the second they walk on stage https://t.co/qCuo6I9SQq",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @ZionWarrior6 I think lunch was ready at the care home, then it was time for nap and then Countdown.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "@ZionWarrior6 I think lunch was ready at the care home, then it was time for nap and then Countdown.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Breakdown very much pending not sure how much I can take of this \ud83d\ude29\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Breakdown very much pending not sure how much I can take of this \ud83d\ude29",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: The people who throw around the term \u201csnowflake\u201d as an insult are, in fact, the biggest snowflakes. Looking at you @realDonaldTrump\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "The people who throw around the term \u201csnowflake\u201d as an insult are, in fact, the biggest snowflakes. Looking at you @realDonaldTrump",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Here is my book that no-one will ever read! \ud83d\udc68\ud83c\udffd\u200d\ud83d\udd2c https://t.co/EstLa52GEX\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Here is my book that no-one will ever read! \ud83d\udc68\ud83c\udffd\u200d\ud83d\udd2c https://t.co/EstLa52GEX",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: women say they want a man who has his life together. so how come whenever i show one the seven days\u2019 worth of microwaved broccoli, carrot circles and chicken breast i keep in a tupperware in my fridge at all times, they are instantly rendered catatonic with clinical depression\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "women say they want a man who has his life together. so how come whenever i show one the seven days\u2019 worth of microwaved broccoli, carrot circles and chicken breast i keep in a tupperware in my fridge at all times, they are instantly rendered catatonic with clinical depression",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I'm going wedding dress shopping Thursday \ud83d\ude0a\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I'm going wedding dress shopping Thursday \ud83d\ude0a",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: every day I check for the Stardew Valley 1.5 update on Switch and every day God forsakes me\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "every day I check for the Stardew Valley 1.5 update on Switch and every day God forsakes me",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Today has been a good day, I didn't fall off a ladder, my model train show tickets came, I got mentioned on @WWFCFancast, they liked my bostocks cup recommendation, and more importantly, they got my name right! Hurrah.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Today has been a good day, I didn't fall off a ladder, my model train show tickets came, I got mentioned on @WWFCFancast, they liked my bostocks cup recommendation, and more importantly, they got my name right! Hurrah.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I am starting off my day by watching a Dragons Den special on Deborah Meaden and eating a Pot Noodle. My life is perfect.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "I am starting off my day by watching a Dragons Den special on Deborah Meaden and eating a Pot Noodle. My life is perfect.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i\u2019m a sick. sick man..\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i\u2019m a sick. sick man..",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: when a girl says she isn\u2019t a girls girl \ud83d\udea9\ud83d\udea9\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "when a girl says she isn\u2019t a girls girl \ud83d\udea9\ud83d\udea9",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Not me rewatching He\u2019s All That just to cringe the whole time until that mf pulls up on a horse!!!!!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Not me rewatching He\u2019s All That just to cringe the whole time until that mf pulls up on a horse!!!!!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I don\u2019t get the whole Bishop Sycamore thing. I literally have nightmares about being a grown man and playing high school football again, I don\u2019t get why anybody would choose to do that willingly\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I don\u2019t get the whole Bishop Sycamore thing. I literally have nightmares about being a grown man and playing high school football again, I don\u2019t get why anybody would choose to do that willingly",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i just want someone who would still love me even IF I grew that bad moustache\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i just want someone who would still love me even IF I grew that bad moustache",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: my mom says i need to interact w actual ppl and not just folks online :((( i have no friends irl\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "my mom says i need to interact w actual ppl and not just folks online :((( i have no friends irl",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @suzysophia_ SO PROUD OF YOU\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@suzysophia_ SO PROUD OF YOU",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I wish I could watch Disney channel original movies on the old box TVs to get the full effect again\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I wish I could watch Disney channel original movies on the old box TVs to get the full effect again",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Words cannot express how much I HATE glitter\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Words cannot express how much I HATE glitter",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: If you don't eat meat, or just fancy a meatless meal, I'd recommend this, it's delicious. I made it last night and as there are two of us and lots of pie we're having it again tonight. # vegetarian https://t.co/LfUE5kx8CR\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "If you don't eat meat, or just fancy a meatless meal, I'd recommend this, it's delicious. I made it last night and as there are two of us and lots of pie we're having it again tonight. # vegetarian https://t.co/LfUE5kx8CR",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: all my outfits would look so much better if i was tatted \ud83d\udc94\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "all my outfits would look so much better if i was tatted \ud83d\udc94",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Anyone calling vaccine passports unworkable needs to explain how it's different to requiring ID to enter a nightclub.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Anyone calling vaccine passports unworkable needs to explain how it's different to requiring ID to enter a nightclub.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I really feel bad for all the pups this time of year. \ud83c\udf87\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I really feel bad for all the pups this time of year. \ud83c\udf87",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Some pretty great things are happening at the call center. Listen in to 104.5 for the Care-A-Thon! Each dollar is being matched, my friends!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Some pretty great things are happening at the call center. Listen in to 104.5 for the Care-A-Thon! Each dollar is being matched, my friends!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @humorandanimals There is nothing better on this earth than animals!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@humorandanimals There is nothing better on this earth than animals!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Sorry I've not been that active in chat! I have started an actual 9-5 job on top of finishing university! Hope everyone is doing good :D\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Sorry I've not been that active in chat! I have started an actual 9-5 job on top of finishing university! Hope everyone is doing good :D",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I\u2019m sorry but high school was the longest 4 years of my life and I will not miss it at all\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I\u2019m sorry but high school was the longest 4 years of my life and I will not miss it at all",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @CLBIsA10 @ItsGinjaNinja_ hes fucking horrible\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@CLBIsA10 @ItsGinjaNinja_ hes fucking horrible",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @flyingsolo1111 @tokenstate Don't know if they've changed their minds, but in the past they have made a point of saying they have no intention of creating a token.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@flyingsolo1111 @tokenstate Don't know if they've changed their minds, but in the past they have made a point of saying they have no intention of creating a token.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I wonder if the ubiquity of spell checkers will change the evolution of language? #ShowerThoughts\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I wonder if the ubiquity of spell checkers will change the evolution of language? #ShowerThoughts",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i expected there to be much more spaghetti at this point in my life\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i expected there to be much more spaghetti at this point in my life",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: The rate at which I go between thinking: \u2018it\u2019s fine, I\u2019ve still got 3 weeks to write my dissertation\u2019 and \u2018shit I\u2019ve only got three weeks to write my dissertation\u2019 is causing some serious procrastination whiplash.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "The rate at which I go between thinking: \u2018it\u2019s fine, I\u2019ve still got 3 weeks to write my dissertation\u2019 and \u2018shit I\u2019ve only got three weeks to write my dissertation\u2019 is causing some serious procrastination whiplash.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: wild that theres a whole industry of pop ups that are like just elaborate ig photo ops and people are paying for them???\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "wild that theres a whole industry of pop ups that are like just elaborate ig photo ops and people are paying for them???",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @AsdaServiceTeam imagine your delivery being 2 hours late, and imagine calling up your service team only for them to hang up at 10pm, coincidentally the same time the office closes. But it\u2019s okay, my \u00a33 delivery fee is being refunded though \ud83d\udc4a\ud83c\udffb\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@AsdaServiceTeam imagine your delivery being 2 hours late, and imagine calling up your service team only for them to hang up at 10pm, coincidentally the same time the office closes. But it\u2019s okay, my \u00a33 delivery fee is being refunded though \ud83d\udc4a\ud83c\udffb",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: 'but that's different' is never a valid argument\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "'but that's different' is never a valid argument",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I wish i loved my body\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I wish i loved my body",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I\u2019m at the age where i\u2019m excited about casseroles. i\u2019m s c a r e d\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I\u2019m at the age where i\u2019m excited about casseroles. i\u2019m s c a r e d",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: There\u2019s nothing more empowering than a new phone case\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "There\u2019s nothing more empowering than a new phone case",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: My throat hurts so bad rn\ud83d\ude23\ud83d\ude23\ud83d\ude37\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "My throat hurts so bad rn\ud83d\ude23\ud83d\ude23\ud83d\ude37",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I look so fucking good right now why am I not doing anything\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I look so fucking good right now why am I not doing anything",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: shang chi meant so fucking much to me. i can hardly imagine what it meant to others.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "shang chi meant so fucking much to me. i can hardly imagine what it meant to others.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: NEW VID ALERT \ud83d\udea8 Powerbeats Pro Wireless Headphones Unboxing and Review! (feat. Alex). GO CHECK THESE OUT \r\nhttps://t.co/yIiwzAKI1S https://t.co/ZRkXO3W83f\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "NEW VID ALERT \ud83d\udea8 Powerbeats Pro Wireless Headphones Unboxing and Review! (feat. Alex). GO CHECK THESE OUT \r\nhttps://t.co/yIiwzAKI1S https://t.co/ZRkXO3W83f",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @Showmasters are basically thieves, quoting it\u2019s in the small print so you can\u2019t have a refund.\r\nDates moved from summer, to a 4 hour slot on a Friday evening in November which is about as much use as a telescopic sight on a knife.#WeWantARefund @UKConsumerRight\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "@Showmasters are basically thieves, quoting it\u2019s in the small print so you can\u2019t have a refund.\r\nDates moved from summer, to a 4 hour slot on a Friday evening in November which is about as much use as a telescopic sight on a knife.#WeWantARefund @UKConsumerRight",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: when i try to bond with my friends' boyfriends i feel like jane goodall\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "when i try to bond with my friends' boyfriends i feel like jane goodall",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I tried to use GIMP but I hate it and it doesn\u2019t work with my iCloud Drive. I\u2019m thinking of just caving &amp; purchasing the Photoshop cc sub \ud83d\ude29\r\n\r\nI think I can get away with just buying a photoshop subscription, I don\u2019t mind Inkscape &amp; Shotcut.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I tried to use GIMP but I hate it and it doesn\u2019t work with my iCloud Drive. I\u2019m thinking of just caving &amp; purchasing the Photoshop cc sub \ud83d\ude29\r\n\r\nI think I can get away with just buying a photoshop subscription, I don\u2019t mind Inkscape &amp; Shotcut.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: so like does anyone even remember what happened in september\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "so like does anyone even remember what happened in september",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: the manliest thing I can think of is when the men from the World Cup passionately sing their national anthem\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "the manliest thing I can think of is when the men from the World Cup passionately sing their national anthem",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: He\u2019s All That literally made me cry I\u2019m not kidding I feel so dumb!!!!!!!!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "He\u2019s All That literally made me cry I\u2019m not kidding I feel so dumb!!!!!!!!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: facebook is so ridiculously broken. absolute garbage platform, -2/10.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "facebook is so ridiculously broken. absolute garbage platform, -2/10.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Tried to give myself a trim last night and ended up cutting like 4 inches \ud83e\udd74\ud83d\ude2d\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Tried to give myself a trim last night and ended up cutting like 4 inches \ud83e\udd74\ud83d\ude2d",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: love living in a capitalist society where i look forward to getting a surgery where i\u2019m legit GETTING AN INTERNAL BODY PART REMOVED bc it means i\u2019ll get a few days off from work xoxo\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "love living in a capitalist society where i look forward to getting a surgery where i\u2019m legit GETTING AN INTERNAL BODY PART REMOVED bc it means i\u2019ll get a few days off from work xoxo",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Shit. After a hilarious yet faithful recreation of Winnie the Pooh a part of me is now stuck inside a honey jar.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Shit. After a hilarious yet faithful recreation of Winnie the Pooh a part of me is now stuck inside a honey jar.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Today my little lady started school-how on earth did that happen? #FirstDayofSchool\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Today my little lady started school-how on earth did that happen? #FirstDayofSchool",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Can\u2019t believe there was a time when fergalicious was a new song and everyone experienced that magic for the first time\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Can\u2019t believe there was a time when fergalicious was a new song and everyone experienced that magic for the first time",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Love and kindness are never wasted. They always make a difference. They bless the one who receives them, and they bless you, the giver.\u201d \u2014 Barbara De Angelis. \ud83d\udc95#BeKind #inspirationalquote https://t.co/h2Buc0tWev\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Love and kindness are never wasted. They always make a difference. They bless the one who receives them, and they bless you, the giver.\u201d \u2014 Barbara De Angelis. \ud83d\udc95#BeKind #inspirationalquote https://t.co/h2Buc0tWev",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Very exciting to see rapper @Santandave1 referencing Of Mice and Men on his verse \ud83d\udc4f\ud83c\udffd\ud83d\ude02 https://t.co/4onZzT8ze8\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Very exciting to see rapper @Santandave1 referencing Of Mice and Men on his verse \ud83d\udc4f\ud83c\udffd\ud83d\ude02 https://t.co/4onZzT8ze8",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: That rest stop was so stressful I forgot to pee \ud83d\ude29\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "That rest stop was so stressful I forgot to pee \ud83d\ude29",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Happy new month to all my Mutuals and Friends on here, wishing us all good health and more financial breakthrough this month.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Happy new month to all my Mutuals and Friends on here, wishing us all good health and more financial breakthrough this month.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I can't wait to name my children after things I will never have. \r\nMy daughter will be Hope. \r\nMy son will be PS5 because that shit is expensive.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "I can't wait to name my children after things I will never have. \r\nMy daughter will be Hope. \r\nMy son will be PS5 because that shit is expensive.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Social Care for the young is basically a bath board and bed rest and your done.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Social Care for the young is basically a bath board and bed rest and your done.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: just got a jalapeno seed in my eye... it was the worst pain I've ever felt but thank God for me being a biologist/chemist &amp; not being afraid to put my eye under water\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "just got a jalapeno seed in my eye... it was the worst pain I've ever felt but thank God for me being a biologist/chemist &amp; not being afraid to put my eye under water",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: love it when Jonny makes me use earphones to watch something on my phone so he can play fifa\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "love it when Jonny makes me use earphones to watch something on my phone so he can play fifa",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Owwwww stressful day.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Owwwww stressful day.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: have a listen, download it for whatever overly-specific amount you think it's worth, and if you remember the original, have a think about how far we've all come since those sweaty pub gig days. And like and RT and all that good stuff \ud83d\ude1a\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "have a listen, download it for whatever overly-specific amount you think it's worth, and if you remember the original, have a think about how far we've all come since those sweaty pub gig days. And like and RT and all that good stuff \ud83d\ude1a",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Wow how do y\u2019all watch basketball just a bunch of dudes running around and bouncing a ball what a snore fest\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Wow how do y\u2019all watch basketball just a bunch of dudes running around and bouncing a ball what a snore fest",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: if the United States was colonized by Britain, then why don\u2019t we drive on the left side of the road just like the UK\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "if the United States was colonized by Britain, then why don\u2019t we drive on the left side of the road just like the UK",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: nothing more I want/ever wanted in life than this move to London for a couple months to go ahead, finally being able to enjoy life a lil \ud83e\udd1e\ud83c\udffb\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "nothing more I want/ever wanted in life than this move to London for a couple months to go ahead, finally being able to enjoy life a lil \ud83e\udd1e\ud83c\udffb",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: bae calls me on FaceTime so we can keep each other company while we work on our art and honestly it\u2019s so wholesome and motivating\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "bae calls me on FaceTime so we can keep each other company while we work on our art and honestly it\u2019s so wholesome and motivating",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: One of these days I want Scar to say something absolutely weird, like his brand of weird, and whoever he\u2019s having a conversation with to just go \u201cwhat the fuck Scar?\u201d in absolute baffling confusion\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "One of these days I want Scar to say something absolutely weird, like his brand of weird, and whoever he\u2019s having a conversation with to just go \u201cwhat the fuck Scar?\u201d in absolute baffling confusion",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: So after 7 months of unemployment, I start my new job on Tuesday, and then I move out next Friday.. I\u2019m over here buzzing BUT NOW MY GEAR BOX IS FUCKED AND ITS GOING TO COST \u00a3800 TO FIX, IT WAS SUPPOSED TO BE A GOOD WEEK\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "So after 7 months of unemployment, I start my new job on Tuesday, and then I move out next Friday.. I\u2019m over here buzzing BUT NOW MY GEAR BOX IS FUCKED AND ITS GOING TO COST \u00a3800 TO FIX, IT WAS SUPPOSED TO BE A GOOD WEEK\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: why are salads so expensive?!It's like I'm being punished for tryna eat healthy...\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "why are salads so expensive?!It's like I'm being punished for tryna eat healthy...",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Bring on diallo ffs. Nothing is working rn.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Bring on diallo ffs. Nothing is working rn.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: how close i am to losing it. https://t.co/iQ5onEyYhb\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "how close i am to losing it. https://t.co/iQ5onEyYhb",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: When my girlfriend goes to work I\u2019m not sure what to do tbh.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "When my girlfriend goes to work I\u2019m not sure what to do tbh.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i just absentmindedly scooped a spoonful of cat food into my cup of coffee. someone please save me from myself\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i just absentmindedly scooped a spoonful of cat food into my cup of coffee. someone please save me from myself",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: \"@elliekonsker: if u wear heels to school i have a few questions: 1. why\" ask some of the salcc girls\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "\"@elliekonsker: if u wear heels to school i have a few questions: 1. why\" ask some of the salcc girls",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Meh\u2026Drakes album. Don\u2019t feel like there\u2019s a song on there that I wanna listen to twice. Maybe it will grow on me \ud83e\udd37\ud83c\udffc\u200d\u2640\ufe0f\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Meh\u2026Drakes album. Don\u2019t feel like there\u2019s a song on there that I wanna listen to twice. Maybe it will grow on me \ud83e\udd37\ud83c\udffc\u200d\u2640\ufe0f",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: me with an 8am chem lab on friday\ud83d\ude2d\ud83d\ude2d https://t.co/lBF3pfsqJ2\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "me with an 8am chem lab on friday\ud83d\ude2d\ud83d\ude2d https://t.co/lBF3pfsqJ2",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Completed it \u2705\ud83d\udc9a\r\n\r\n_\r\nJurassic Coast Macmillan Mighty Hike was tough, but so rewarding! Up at 5am &amp; home by 10pm \ud83d\ude33 BUT views to die for, the BEST team ever, Jake completing it in his sliders which is a whole other\u2026 https://t.co/kxNSLTd60g\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Completed it \u2705\ud83d\udc9a\r\n\r\n_\r\nJurassic Coast Macmillan Mighty Hike was tough, but so rewarding! Up at 5am &amp; home by 10pm \ud83d\ude33 BUT views to die for, the BEST team ever, Jake completing it in his sliders which is a whole other\u2026 https://t.co/kxNSLTd60g",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I'm gonna have a breakdown.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I'm gonna have a breakdown.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: so woke up this morning and have missed my first lecture already lol BUT I did leave myself a chicken nugget to wake up to\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "so woke up this morning and have missed my first lecture already lol BUT I did leave myself a chicken nugget to wake up to",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Petition to call erections social dickstanding\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Petition to call erections social dickstanding",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Here comes the final of the UK #DailyBriefing - who will win, Johnson or Covid?\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Here comes the final of the UK #DailyBriefing - who will win, Johnson or Covid?",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I have such an obsession with white shoes but can\u2019t keep them clean. Someone help me :(\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I have such an obsession with white shoes but can\u2019t keep them clean. Someone help me :(",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I just wanna lie in bed and eat skips and get paid for it\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I just wanna lie in bed and eat skips and get paid for it",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: #EconTwitter Job candidates: I already see some postings trickling in on @JOE_listings (and I\u2019m always looking to procrastinate) so send me your papers for comment! My specialties are beh/exp and eship/innovation but I\u2019ll read anything! Dms open, \u2709\ufe0f djlee@udel.edu\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "#EconTwitter Job candidates: I already see some postings trickling in on @JOE_listings (and I\u2019m always looking to procrastinate) so send me your papers for comment! My specialties are beh/exp and eship/innovation but I\u2019ll read anything! Dms open, \u2709\ufe0f djlee@udel.edu",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Happy happy happy https://t.co/9W1XIbpL6x\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Happy happy happy https://t.co/9W1XIbpL6x",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Hey you! Yeah, YOU.\r\n\r\nYou're cooler than the other side of the pillow.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Hey you! Yeah, YOU.\r\n\r\nYou're cooler than the other side of the pillow.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Me: You know, for someone with chronic anxiety I think I'm dealing with this pandemic quite well.\r\n\r\nAlso me: Wow, I forgot how good a freshly shaved undercut feels!\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Me: You know, for someone with chronic anxiety I think I'm dealing with this pandemic quite well.\r\n\r\nAlso me: Wow, I forgot how good a freshly shaved undercut feels!",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I hope the Knicks make a run to the finals. This atmosphere is so fun to watch.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I hope the Knicks make a run to the finals. This atmosphere is so fun to watch.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Kings of Leon. Sex on Fire. \r\n\r\nThat\u2019s it. That\u2019s the whole tweet.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Kings of Leon. Sex on Fire. \r\n\r\nThat\u2019s it. That\u2019s the whole tweet.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Teenage daughters and I learned how to play \"Cataan\" tonight.  So much fun!  @AnneWheaton, thanks to Wil and @tabletop, it was very easy to learn!  We look forward to playing again!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Teenage daughters and I learned how to play \"Cataan\" tonight.  So much fun!  @AnneWheaton, thanks to Wil and @tabletop, it was very easy to learn!  We look forward to playing again!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Yeah I\u2019m following a lot of shows right now, the price is right is pretty good but season 1 is better than season 2\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Yeah I\u2019m following a lot of shows right now, the price is right is pretty good but season 1 is better than season 2",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @itsmrevandaniel I can't believe people still don't genuinely hate every player from that Astros team.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@itsmrevandaniel I can't believe people still don't genuinely hate every player from that Astros team.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Being able to open all of the windows today because it\u2019s warm makes me so \ud83e\udd7a\ud83e\udd7a\ud83e\udd7a\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Being able to open all of the windows today because it\u2019s warm makes me so \ud83e\udd7a\ud83e\udd7a\ud83e\udd7a",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: my favorite thing about my grandparents is that they're so afraid to talk about me being gay that our catch up phone calls are incredibly short \ud83d\udc98\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "my favorite thing about my grandparents is that they're so afraid to talk about me being gay that our catch up phone calls are incredibly short \ud83d\udc98",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: 2br apt, Notts city centre  https://t.co/yFj989BdXR\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "2br apt, Notts city centre  https://t.co/yFj989BdXR",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: can u believe shaz hung up on me to see if her mark tweet sent where's the justic e \ud83d\ude24\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "can u believe shaz hung up on me to see if her mark tweet sent where's the justic e \ud83d\ude24",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: self care is unfollowing everyone on social media except dogs\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "self care is unfollowing everyone on social media except dogs",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: You know what works better than therapy? Watching Mamma Mia\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "You know what works better than therapy? Watching Mamma Mia",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Excited it's almost Thanksgiving!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Excited it's almost Thanksgiving!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: these two girls are on the beach in lawn chairs, i love shoobies\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "these two girls are on the beach in lawn chairs, i love shoobies",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: bought some index cards and a 3 ring binder the other day just so i could feel alive\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "bought some index cards and a 3 ring binder the other day just so i could feel alive",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Who's bored at home?\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Who's bored at home?",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: im just tryna get in n out doordashed to india rn\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "im just tryna get in n out doordashed to india rn",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: craving hot sauce\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "craving hot sauce",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: What a showing from the whole squad. Champions down, Grealish and Sterling pocketed, no Kane needed, Dreamland. COME ON YOU SPURS #COYS #TOTMCI\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "What a showing from the whole squad. Champions down, Grealish and Sterling pocketed, no Kane needed, Dreamland. COME ON YOU SPURS #COYS #TOTMCI",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: really wanna show the amish an air fryer\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "really wanna show the amish an air fryer",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: The most wonderful time of the year \u2728 in my element \ud83e\udd70\ud83c\udf84 https://t.co/Lg40FMwaXI\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "The most wonderful time of the year \u2728 in my element \ud83e\udd70\ud83c\udf84 https://t.co/Lg40FMwaXI",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Why do people keep posting TikToks with their HEADPHONE WIRES ALL KNOTTED????? I CAN NOT COPE WITH THIS, why wouldn\u2019t you sort out that wirey mess pls\ud83e\udd7a\ud83e\udd7a\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Why do people keep posting TikToks with their HEADPHONE WIRES ALL KNOTTED????? I CAN NOT COPE WITH THIS, why wouldn\u2019t you sort out that wirey mess pls\ud83e\udd7a\ud83e\udd7a",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: just realised the first time I will listen to Red (taylor's version) will be on the way to printworks so I will literally be crying in the club\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "just realised the first time I will listen to Red (taylor's version) will be on the way to printworks so I will literally be crying in the club",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: You mean to tell me that I\u2019m being forced to take all online classes, which require no classrooms or anything physical of any kind, and I have to pay more than in person classes???\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "You mean to tell me that I\u2019m being forced to take all online classes, which require no classrooms or anything physical of any kind, and I have to pay more than in person classes???",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Just rediscovered that my nose is always in my field of vision so I will unfortunately be dropping out as I cannot continue my assigned readings in peace\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Just rediscovered that my nose is always in my field of vision so I will unfortunately be dropping out as I cannot continue my assigned readings in peace",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Why does money heist do this to me \ud83d\ude2d\r\nMy heart \ud83d\ude2d\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Why does money heist do this to me \ud83d\ude2d\r\nMy heart \ud83d\ude2d",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: #jackstack @TGIFridays \ud83d\ude0d\ud83d\ude0d\ud83d\ude0d https://t.co/J2Ycj5WbOe\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "#jackstack @TGIFridays \ud83d\ude0d\ud83d\ude0d\ud83d\ude0d https://t.co/J2Ycj5WbOe",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: how do parents of twins make sure they are calling them the right names??? what if they\u2019ve actually been called their twins name their entire life and no one knows?? what if my name is actually Kyle?? Did my parents mess up too??\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "how do parents of twins make sure they are calling them the right names??? what if they\u2019ve actually been called their twins name their entire life and no one knows?? what if my name is actually Kyle?? Did my parents mess up too??",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: the way uni won\u2019t give me extra time on assessments despite them replacing exams (which i get time for) because of covid \ud83e\udd29\ud83e\udd29\ud83e\udd70\ud83d\ude0d\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "the way uni won\u2019t give me extra time on assessments despite them replacing exams (which i get time for) because of covid \ud83e\udd29\ud83e\udd29\ud83e\udd70\ud83d\ude0d",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: It\u2019s been a blissful 2.5 hours of sleep tonight\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "It\u2019s been a blissful 2.5 hours of sleep tonight",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Have the most balanced diet, a healthy balance of codeine, panadol and ibuprofen....\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Have the most balanced diet, a healthy balance of codeine, panadol and ibuprofen....",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Our little pumpkin is due April 2021! \ud83e\udde1 https://t.co/WPsyO8ZqX8\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Our little pumpkin is due April 2021! \ud83e\udde1 https://t.co/WPsyO8ZqX8",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Me&gt; I'm fine \r\nAlso me&gt; 24/7 star trek on my mind\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Me&gt; I'm fine \r\nAlso me&gt; 24/7 star trek on my mind",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: this Brazilian dude always likes my pictures on instagram, nothing more, and honestly he\u2019s a pretty welcome presence on my account\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "this Brazilian dude always likes my pictures on instagram, nothing more, and honestly he\u2019s a pretty welcome presence on my account",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Anyone need a body for a human sacrifice? Trying to find a valid excuse to not go to work today.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Anyone need a body for a human sacrifice? Trying to find a valid excuse to not go to work today.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Class being canceled occasionally is always nice but 4 in one week feels like an early Christmas miracle \ud83d\ude33\ud83e\udd17\ud83c\udf84\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Class being canceled occasionally is always nice but 4 in one week feels like an early Christmas miracle \ud83d\ude33\ud83e\udd17\ud83c\udf84",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: there are few things in this world that an everything bagel and cream cheese can\u2019t fix\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "there are few things in this world that an everything bagel and cream cheese can\u2019t fix",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I\u2019m getting the vaccine on Wednesday \ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I\u2019m getting the vaccine on Wednesday \ud83d\ude2d\ud83d\ude2d\ud83d\ude2d",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @RachaelSmarty Honestly cannot wait to give this a go! X\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@RachaelSmarty Honestly cannot wait to give this a go! X",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: getting in a crash on january 1st seemed like the worst thing in the world but i\u2019ve just been given the fittest hire car so \ud83d\ude1asilver linings\ud83d\ude1a\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "getting in a crash on january 1st seemed like the worst thing in the world but i\u2019ve just been given the fittest hire car so \ud83d\ude1asilver linings\ud83d\ude1a",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: im glad we finally have a party in opposition who are committed to taking the government to task for not making mistakes fast enough\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "im glad we finally have a party in opposition who are committed to taking the government to task for not making mistakes fast enough",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @kmflett And with a plentiful supply of rhubarb.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "@kmflett And with a plentiful supply of rhubarb.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: The views on this hike were fantastic... at least the ones without my big galoot (aka@galooteusmaximus) in them. @ Silver Lake American Fork Canyon https://t.co/eFPlVlBDqc\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "The views on this hike were fantastic... at least the ones without my big galoot (aka@galooteusmaximus) in them. @ Silver Lake American Fork Canyon https://t.co/eFPlVlBDqc",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I\u2019ll miss waking up and hearing all the exciting news from overnight. I\u2019ll miss the BBC coverage keeping me company during the day as I\u2019m working. I\u2019ll miss the feeling that there\u2019s more to come the following day\u2026\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I\u2019ll miss waking up and hearing all the exciting news from overnight. I\u2019ll miss the BBC coverage keeping me company during the day as I\u2019m working. I\u2019ll miss the feeling that there\u2019s more to come the following day\u2026",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: what's the diagnosis for when ur dog sits down but headfirst\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "what's the diagnosis for when ur dog sits down but headfirst",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I was getting off the skii lift today and this dude bumped into me and goes \u201coh i\u2019m sorry little guy\u201d ?????? Im literally 20. Also a girl\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I was getting off the skii lift today and this dude bumped into me and goes \u201coh i\u2019m sorry little guy\u201d ?????? Im literally 20. Also a girl",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Random third grader pointed at me with her whole class lined up, \u201clook, that\u2019s the tallest girl in the world!\u201d\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Random third grader pointed at me with her whole class lined up, \u201clook, that\u2019s the tallest girl in the world!\u201d",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I never thought at the start of lockdown that I would say lockdown life would be too overwhelming for me lol\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I never thought at the start of lockdown that I would say lockdown life would be too overwhelming for me lol",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: people in london are always asking me for directions !! i am as lost as you !!!!!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "people in london are always asking me for directions !! i am as lost as you !!!!!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I work in DC. I live 15 minutes from the Capitol Building. I walk my dog down the National Mall at least once a week. I left work early today from the riots. This is horrific. This is scary. This is terrorism. #DCProtests\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I work in DC. I live 15 minutes from the Capitol Building. I walk my dog down the National Mall at least once a week. I left work early today from the riots. This is horrific. This is scary. This is terrorism. #DCProtests",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Hailey convinced Tayler that putting a spoon in the microwave to scoop ice cream faster was a good idea\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Hailey convinced Tayler that putting a spoon in the microwave to scoop ice cream faster was a good idea",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: So, a country that is trillions in debt, with numbers approaching 13 million on surgical waiting lists and hurtling towards facism regime, is talking about rescuing people from a facist regime?\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "So, a country that is trillions in debt, with numbers approaching 13 million on surgical waiting lists and hurtling towards facism regime, is talking about rescuing people from a facist regime?",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I love the weekend of the 4th bc its the only time I can jam out to my fave song God Bless the USA w/o being judged \ud83c\uddfa\ud83c\uddf8\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I love the weekend of the 4th bc its the only time I can jam out to my fave song God Bless the USA w/o being judged \ud83c\uddfa\ud83c\uddf8",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I'm currently getting a Japanese straight perm so that I have the beautiful sleek hair of my dreams\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I'm currently getting a Japanese straight perm so that I have the beautiful sleek hair of my dreams",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: virgos are leos in a vest\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "virgos are leos in a vest",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: @miiniigun I feel that 100%, my anxiety stops me from talking to so many people. I've let so many friendships die because I can't push myself to talk to them.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "@miiniigun I feel that 100%, my anxiety stops me from talking to so many people. I've let so many friendships die because I can't push myself to talk to them.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Best night ever \ud83d\udc9c\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Best night ever \ud83d\udc9c",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i love acknowledging the other twinks on campus hi friends!!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i love acknowledging the other twinks on campus hi friends!!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Our mate @bikeitben1 has just broken the 48-hour distance mountain bike world record. HERO. SUPERHERO. \u2764\ufe0f http://t.co/ryrVxbuUmV\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Our mate @bikeitben1 has just broken the 48-hour distance mountain bike world record. HERO. SUPERHERO. \u2764\ufe0f http://t.co/ryrVxbuUmV",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i hate when that guy on tiktok is all \u201ci uNdeRsTAnd iTs eASy tO keEp wAtChInG vIdEos..\u201d LIKE BRO MIND YA BUSINESS\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i hate when that guy on tiktok is all \u201ci uNdeRsTAnd iTs eASy tO keEp wAtChInG vIdEos..\u201d LIKE BRO MIND YA BUSINESS",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: According to my road rage, the word of the day is asshat\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "According to my road rage, the word of the day is asshat",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Oh no here comes the sushi craving \ud83d\ude2b\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Oh no here comes the sushi craving \ud83d\ude2b",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Jfc Huntington bank and United Airlines have me fucked up\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Jfc Huntington bank and United Airlines have me fucked up",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: imagine if he sends a good morning message when he wakes up\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "imagine if he sends a good morning message when he wakes up",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: kyungsoo i know you don\u2019t want to give out spoilers for the moon\u2026but please spoil something we haven\u2019t gotten anything please im on the edge\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "kyungsoo i know you don\u2019t want to give out spoilers for the moon\u2026but please spoil something we haven\u2019t gotten anything please im on the edge",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i love outerbanks, don\u2019t get me wrong. but like why do they call him john b instead of just john. like the only reason someone needs to use their last initial is on the bachelor &amp; there\u2019s multiple people with the same name? but there\u2019s only one john &amp; they all know his last name?\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i love outerbanks, don\u2019t get me wrong. but like why do they call him john b instead of just john. like the only reason someone needs to use their last initial is on the bachelor &amp; there\u2019s multiple people with the same name? but there\u2019s only one john &amp; they all know his last name?",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: FCAS \u2714\ufe0f\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "FCAS \u2714\ufe0f",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: getting into a high speed chase with the cops but using my turn signals in accordance with the law the whole time\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "getting into a high speed chase with the cops but using my turn signals in accordance with the law the whole time",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: finally found the perfect cowboy boots on ebay after searching for weeks \ud83e\udd20\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "finally found the perfect cowboy boots on ebay after searching for weeks \ud83e\udd20",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: IM GETTING MY NAILS DONE TODAY!!!!!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "IM GETTING MY NAILS DONE TODAY!!!!!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I love it when someone criticses my parenting then their adult son cuts his finger off with a knife and breaks his leg by falling off a bike\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "I love it when someone criticses my parenting then their adult son cuts his finger off with a knife and breaks his leg by falling off a bike",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: The word \u201clegend\u201d gets bandied about... ah #fozzy wherever you are, I hope you\u2019re ok pal \ud83d\ude02 @RadioX @ChrisMoyles\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "The word \u201clegend\u201d gets bandied about... ah #fozzy wherever you are, I hope you\u2019re ok pal \ud83d\ude02 @RadioX @ChrisMoyles",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i am afraid that, despite all of your words and actions, you actually just hate me\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i am afraid that, despite all of your words and actions, you actually just hate me",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I entered @grav3yardgirl HUGE BACK TO SCHOOL GIVEAWAY to win a macbook pro &amp; tons of other prizes! CHECK IT OUT HERE! https://t.co/qwNsVghNAc #grav3yardgirl\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I entered @grav3yardgirl HUGE BACK TO SCHOOL GIVEAWAY to win a macbook pro &amp; tons of other prizes! CHECK IT OUT HERE! https://t.co/qwNsVghNAc #grav3yardgirl",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Sad because I\u2019ve missed so much of Oxford the past year but happy cuz I just saw a squirrel carrying it\u2019s baby whilst writing my essay by the river I love it https://t.co/A2AlOimCLs\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Sad because I\u2019ve missed so much of Oxford the past year but happy cuz I just saw a squirrel carrying it\u2019s baby whilst writing my essay by the river I love it https://t.co/A2AlOimCLs",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: love when the train stops in philly and everybody boards and of a sudden it smells like a ham sandwich\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "love when the train stops in philly and everybody boards and of a sudden it smells like a ham sandwich",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Yall ever put a splash of pickle brine in your spaghetti? Its actually not bad .@ClaussenPickles #Food\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Yall ever put a splash of pickle brine in your spaghetti? Its actually not bad .@ClaussenPickles #Food",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Republicans have nobody to blame but themselves.  They allowed this to happen. https://t.co/wkvmsb6LFo\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Republicans have nobody to blame but themselves.  They allowed this to happen. https://t.co/wkvmsb6LFo",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Watched the #matthanock clip and immediately my mental health regressed, and not just cos he fucked the NHS\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Watched the #matthanock clip and immediately my mental health regressed, and not just cos he fucked the NHS",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: So happy to be alive today.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "So happy to be alive today.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I want to do a puzzle while drunk again\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "I want to do a puzzle while drunk again",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Forbidden forest was so peng\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Forbidden forest was so peng",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: For the first time my outfit doesn't have black in it. \r\n\r\nProud of myself.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "For the first time my outfit doesn't have black in it. \r\n\r\nProud of myself.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: i love texting on my laptop so much. i enter a flow state of gossip. i turn into a bard. a town crier. all the news that\u2019s fit to print.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "i love texting on my laptop so much. i enter a flow state of gossip. i turn into a bard. a town crier. all the news that\u2019s fit to print.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: 5:30 banshee-like kitten zoomies are definitely my all-time favorite alarm clock, and the sound of jewelry boxes flipping over and burnouts on the wood floor make for the calmest, most enjoyable start to any workday.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "5:30 banshee-like kitten zoomies are definitely my all-time favorite alarm clock, and the sound of jewelry boxes flipping over and burnouts on the wood floor make for the calmest, most enjoyable start to any workday.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Sitting next to the world's loudest mouth-breather on the first day of class did a really good job of demystifying grad school for me today\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "Sitting next to the world's loudest mouth-breather on the first day of class did a really good job of demystifying grad school for me today",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Doing Kings Worthy School quiz.. 9/10... face number 9 let us down, thought it was @PrueLeith but it was actually Rolf Harris #fail \ud83d\ude11 https://t.co/LlrtQETok9\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Doing Kings Worthy School quiz.. 9/10... face number 9 let us down, thought it was @PrueLeith but it was actually Rolf Harris #fail \ud83d\ude11 https://t.co/LlrtQETok9",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: hey @phoebe_bridgers i\u2019m free tomorrow btw. The 14th. I\u2019m free on the 14th. Tomorrow. fyi\ud83d\ude03\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "hey @phoebe_bridgers i\u2019m free tomorrow btw. The 14th. I\u2019m free on the 14th. Tomorrow. fyi\ud83d\ude03",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: ksu is requiring everyone to be vaccinated by December and i am so happy eeeee!!\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "ksu is requiring everyone to be vaccinated by December and i am so happy eeeee!!",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: why is butter so extraordinary\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "why is butter so extraordinary",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I\u2019m really looking forward to not hugging my friends and family through choice rather than by law.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "I\u2019m really looking forward to not hugging my friends and family through choice rather than by law.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: Very good analysis and a good demonstration of why you should treat anything your told by the BBC with the utmost care. https://t.co/V6rO4FZqeP\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "Very good analysis and a good demonstration of why you should treat anything your told by the BBC with the utmost care. https://t.co/V6rO4FZqeP",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: IBIZA HAS JUST BEEN BOOKED AGAIN wohooooooooo \ud83c\udf89\ud83d\udc4f\ud83c\udf89\ud83d\udc4f\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "IBIZA HAS JUST BEEN BOOKED AGAIN wohooooooooo \ud83c\udf89\ud83d\udc4f\ud83c\udf89\ud83d\udc4f",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: City BBQ has the best chicken sandwich. Change my mind.\n\nAnswer:",
+    "chosen": "No",
+    "rejected": "Yes",
+    "text": "City BBQ has the best chicken sandwich. Change my mind.",
+    "true_label": 0,
+    "sft_prediction": 1,
+    "sft_correct": false
+  },
+  {
+    "prompt": "Is the following text sarcastic? Answer with only 'Yes' or 'No'.\n\nText: I recovered a repressed memory today of working at @kumandgo in high school 13 years ago &amp; having to answer the phone as \u201cwe go all out at Kum &amp; Go, this is Shelby. How can I help you?\u201d And the prank calls that led to. Pretty sure K&amp;G owe me therapy.\n\nAnswer:",
+    "chosen": "Yes",
+    "rejected": "No",
+    "text": "I recovered a repressed memory today of working at @kumandgo in high school 13 years ago &amp; having to answer the phone as \u201cwe go all out at Kum &amp; Go, this is Shelby. How can I help you?\u201d And the prank calls that led to. Pretty sure K&amp;G owe me therapy.",
+    "true_label": 1,
+    "sft_prediction": 0,
+    "sft_correct": false
+  }
+]

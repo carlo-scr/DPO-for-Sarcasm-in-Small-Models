@@ -436,41 +436,88 @@ def train_dpo_with_config(
     
     # Load base model and tokenizer
     base_model_name = "facebook/MobileLLM-R1.5-360M"
+    merged_sft_path = "models/mobilellm_sft_merged"  # Path to save merged SFT
+    
+    # Fix relative paths
+    if not os.path.isabs(merged_sft_path):
+        if os.path.exists(os.path.join("..", merged_sft_path)):
+            merged_sft_path = os.path.join("..", merged_sft_path)
+        elif not os.path.exists(merged_sft_path):
+            # Will create it below
+            pass
+    
     print(f"Loading base model: {base_model_name}")
     
     tokenizer = AutoTokenizer.from_pretrained(base_model_name, trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     
-    base_model = AutoModelForCausalLM.from_pretrained(
-        base_model_name,
+    # CRITICAL FIX: Save merged SFT to disk, then load as base for DPO
+    # This ensures the DPO adapter correctly references the merged SFT model
+    
+    # Check if merged SFT already exists
+    if not os.path.exists(merged_sft_path):
+        print(f"Creating merged SFT model at: {merged_sft_path}")
+        print(f"  Loading base model...")
+        base_model = AutoModelForCausalLM.from_pretrained(
+            base_model_name,
+            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+            device_map="auto",
+            trust_remote_code=True
+        )
+        
+        print(f"  Loading SFT adapter from: {sft_model_path}")
+        sft_peft_model = PeftModel.from_pretrained(base_model, sft_model_path)
+        
+        print(f"  Merging SFT adapter into base model...")
+        merged_sft_model = sft_peft_model.merge_and_unload()
+        
+        print(f"  Saving merged model to: {merged_sft_path}")
+        merged_sft_model.save_pretrained(merged_sft_path)
+        tokenizer.save_pretrained(merged_sft_path)
+        print("✓ Merged SFT model saved to disk")
+        
+        del base_model, sft_peft_model, merged_sft_model
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
+    else:
+        print(f"✓ Using existing merged SFT model from: {merged_sft_path}")
+    
+    # Now load the merged SFT as our base model for DPO
+    print(f"Loading merged SFT model as base for DPO training...")
+    merged_sft_model = AutoModelForCausalLM.from_pretrained(
+        merged_sft_path,
         torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
         device_map="auto",
         trust_remote_code=True
     )
     
-    # Load SFT adapter (keep as adapter, DON'T merge!)
-    print(f"Loading SFT adapter from: {sft_model_path}")
-    model = PeftModel.from_pretrained(base_model, sft_model_path)
-    
-    # Create reference model (merged version for stable reference)
-    print("Creating reference model (merged SFT for KL tracking)...")
-    reference_model = PeftModel.from_pretrained(
-        AutoModelForCausalLM.from_pretrained(
-            base_model_name,
-            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-            device_map="auto",
-            trust_remote_code=True
-        ),
-        sft_model_path
+    # Add NEW LoRA adapters for DPO training on top of merged SFT
+    lora_config = LoraConfig(
+        r=16,
+        lora_alpha=32,
+        lora_dropout=0.05,
+        bias="none",
+        task_type="CAUSAL_LM",
+        target_modules=["q_proj", "v_proj", "k_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
     )
-    reference_model = reference_model.merge_and_unload()
+    model = get_peft_model(merged_sft_model, lora_config)
+    print("✓ Added fresh LoRA adapters for DPO on top of merged SFT")
+    
+    # Create reference model (same merged SFT, frozen)
+    print("Creating reference model (frozen merged SFT)...")
+    reference_model = AutoModelForCausalLM.from_pretrained(
+        merged_sft_path,
+        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        device_map="auto",
+        trust_remote_code=True
+    )
     reference_model.eval()
     for param in reference_model.parameters():
         param.requires_grad = False
     
     print("✓ Reference model created (frozen merged SFT model)")
-    print("✓ Training model continues from SFT's existing LoRA adapters")
+    print("✓ Training model = merged SFT + NEW LoRA adapters for DPO")
+    print(f"✓ DPO adapter will correctly reference: {merged_sft_path}")
     
     model.print_trainable_parameters()
     
