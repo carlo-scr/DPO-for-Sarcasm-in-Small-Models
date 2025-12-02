@@ -405,7 +405,7 @@ def main():
     all_results = []
     base_model_name = "Qwen/Qwen2.5-0.5B-Instruct"
     
-    # Stage 0: GPT-4 (Zero-shot baseline)
+    '''# Stage 0: GPT-4 (Zero-shot baseline)
     if not args.skip_gpt4:
         print(f"\n{'='*70}")
         print("STAGE 0: GPT-4 (Zero-shot baseline)")
@@ -422,7 +422,7 @@ def main():
     
     if args.gpt4_only:
         print("\n✓ GPT-4 only evaluation complete")
-        return
+        return'''
     
     # Stage 1: Base Model (Zero-shot)
     print(f"\n{'='*70}")
