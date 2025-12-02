@@ -3,6 +3,7 @@ Comprehensive evaluation script to compare all training stages:
 1. Base Model (zero-shot)
 2. After SFT (Phase 1)
 3. After DPO (Phase 2)
+4. GPT-4 (zero-shot baseline)
 
 This script evaluates each model on the GEN-sarc-notsarc dataset and saves comparative results.
 """
@@ -16,6 +17,12 @@ import json
 from datetime import datetime
 import os
 from sklearn.model_selection import train_test_split
+from dotenv import load_dotenv
+from openai import OpenAI
+import time
+
+# Load environment variables from .env file
+load_dotenv()
 
 def load_model_and_tokenizer(model_path, is_adapter=False, base_model_name="Qwen/Qwen2.5-0.5B-Instruct"):
     """Load model and tokenizer. Handles both base models and LoRA adapters."""
@@ -104,6 +111,161 @@ def get_prediction(model, tokenizer, text, max_new_tokens=50):
         prediction = -1
     
     return prediction, response  # Return both prediction and raw response for debugging
+
+def get_gpt4_prediction(client, text, model="gpt-4", max_retries=3):
+    """Get GPT-4 prediction for a single text. Retries if response is unclear."""
+    
+    # Strict system prompt that forces Yes/No
+    system_prompt = """You are a sarcasm detector. You MUST respond with EXACTLY one word: either "Yes" or "No".
+- "Yes" = the text IS sarcastic
+- "No" = the text is NOT sarcastic
+Do not explain. Do not add any other words. Just "Yes" or "No"."""
+    
+    user_prompt = f"Is this text sarcastic?\n\n{text}"
+    
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0,
+                max_tokens=5  # Reduced - only need Yes/No
+            )
+            
+            raw_response = response.choices[0].message.content.strip()
+            response_clean = raw_response.lower().strip('.')
+            
+            # Strict parsing - must be exactly "yes" or "no"
+            if response_clean == 'yes':
+                return 1, raw_response
+            elif response_clean == 'no':
+                return 0, raw_response
+            
+            # If unclear and we have retries left, try again with even stricter prompt
+            if attempt < max_retries - 1:
+                user_prompt = f"Is this text sarcastic? Reply with ONLY 'Yes' or 'No', nothing else.\n\n{text}"
+                continue
+            
+            # Last resort: check if yes/no appears anywhere
+            if 'yes' in response_clean:
+                return 1, raw_response
+            elif 'no' in response_clean:
+                return 0, raw_response
+            
+            return -1, raw_response
+        
+        except Exception as e:
+            print(f"Error with GPT-4 API: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(1)  # Wait before retry
+                continue
+            return -1, str(e)
+    
+    return -1, "Max retries exceeded"
+
+def evaluate_gpt4(client, df, model_name="GPT-4", model="gpt-4", sample_size=None):
+    """Evaluate GPT-4 model."""
+    if sample_size:
+        df = df.sample(n=min(sample_size, len(df)), random_state=42)
+    
+    print(f"\n{'='*70}")
+    print(f"Evaluating: {model_name}")
+    print(f"{'='*70}")
+    print(f"Samples: {len(df)}")
+    print(f"Model: {model}")
+    
+    predictions = []
+    correct = 0
+    unclear = 0
+    
+    true_positives = 0
+    false_positives = 0
+    true_negatives = 0
+    false_negatives = 0
+    
+    # Debug: collect sample responses
+    debug_samples = []
+    
+    for idx, row in tqdm(df.iterrows(), total=len(df), desc=model_name):
+        text = row['text']
+        true_label = 1 if row['class'] == 'sarc' else 0
+        
+        pred, raw_response = get_gpt4_prediction(client, text, model)
+        predictions.append(pred)
+        
+        # Collect first 5 samples for debugging
+        if len(debug_samples) < 5:
+            debug_samples.append({
+                'text': text[:80],
+                'true': true_label,
+                'pred': pred,
+                'response': raw_response[:100]
+            })
+        
+        if pred == -1:
+            unclear += 1
+        else:
+            if pred == true_label:
+                correct += 1
+                if pred == 1:
+                    true_positives += 1
+                else:
+                    true_negatives += 1
+            else:
+                if pred == 1:
+                    false_positives += 1
+                else:
+                    false_negatives += 1
+        
+        # Rate limiting - small delay between requests
+        time.sleep(0.1)
+    
+    # Calculate metrics
+    valid_predictions = sum(1 for p in predictions if p != -1)
+    accuracy = correct / valid_predictions if valid_predictions > 0 else 0
+    
+    # Precision, Recall, F1
+    precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
+    recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
+    f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+    
+    results = {
+        'model_name': model_name,
+        'total_samples': len(df),
+        'valid_predictions': valid_predictions,
+        'unclear_responses': unclear,
+        'correct_predictions': correct,
+        'accuracy': accuracy,
+        'precision': precision,
+        'recall': recall,
+        'f1_score': f1,
+        'true_positives': true_positives,
+        'false_positives': false_positives,
+        'true_negatives': true_negatives,
+        'false_negatives': false_negatives,
+        'timestamp': datetime.now().isoformat()
+    }
+    
+    # Print results
+    print(f"\nResults for {model_name}:")
+    print(f"  Accuracy:  {accuracy:.2%}")
+    print(f"  Precision: {precision:.2%}")
+    print(f"  Recall:    {recall:.2%}")
+    print(f"  F1 Score:  {f1:.2%}")
+    print(f"  Unclear:   {unclear}")
+    
+    # Print debug samples
+    print(f"\nDebug Samples:")
+    for i, sample in enumerate(debug_samples, 1):
+        print(f"\n  {i}. Text: {sample['text']}...")
+        print(f"     True: {sample['true']} | Pred: {sample['pred']}")
+        print(f"     Response: '{sample['response']}'")
+    
+    return results, predictions
+
 
 def evaluate_model(model, tokenizer, df, model_name, sample_size=None):
     """Evaluate a single model."""
@@ -202,6 +364,14 @@ def evaluate_model(model, tokenizer, df, model_name, sample_size=None):
     return results, predictions
 
 def main():
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Evaluate all training stages including GPT-4")
+    parser.add_argument("--skip-gpt4", action="store_true", help="Skip GPT-4 evaluation to save API costs")
+    parser.add_argument("--gpt4-only", action="store_true", help="Only evaluate GPT-4")
+    parser.add_argument("--gpt4-model", type=str, default="gpt-4", help="GPT model to use (e.g., gpt-4, gpt-4-turbo, gpt-3.5-turbo)")
+    args = parser.parse_args()
+    
     # Load test dataset
     print("="*70)
     print("COMPARATIVE MODEL EVALUATION")
@@ -234,6 +404,25 @@ def main():
     
     all_results = []
     base_model_name = "Qwen/Qwen2.5-0.5B-Instruct"
+    
+    # Stage 0: GPT-4 (Zero-shot baseline)
+    if not args.skip_gpt4:
+        print(f"\n{'='*70}")
+        print("STAGE 0: GPT-4 (Zero-shot baseline)")
+        print("="*70)
+        try:
+            # Initialize OpenAI client
+            client = OpenAI()  # Uses OPENAI_API_KEY environment variable
+            results_gpt4, _ = evaluate_gpt4(client, df_test, model_name=f"{args.gpt4_model} (Zero-shot)", model=args.gpt4_model)
+            all_results.append(results_gpt4)
+        except Exception as e:
+            print(f"⚠️  Could not evaluate GPT-4: {e}")
+            print("    Make sure OPENAI_API_KEY environment variable is set")
+            print("    Run: export OPENAI_API_KEY='your-api-key-here'")
+    
+    if args.gpt4_only:
+        print("\n✓ GPT-4 only evaluation complete")
+        return
     
     # Stage 1: Base Model (Zero-shot)
     print(f"\n{'='*70}")
