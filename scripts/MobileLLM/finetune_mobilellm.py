@@ -109,7 +109,7 @@ def setup_lora_model(model_name="facebook/MobileLLM-R1.5-360M"):
     # Load model
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
         device_map="auto",
         trust_remote_code=True  # MobileLLM may require this
     )

@@ -130,7 +130,7 @@ def main():
     print("Loading base model...")
     base_model = AutoModelForCausalLM.from_pretrained(
         base_model_name,
-        torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+        dtype=torch.float16 if device == "cuda" else torch.float32,
         device_map="auto",
         trust_remote_code=True
     )
@@ -144,7 +144,7 @@ def main():
         print("Loading SFT model...")
         base_for_sft = AutoModelForCausalLM.from_pretrained(
             base_model_name,
-            torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+            dtype=torch.float16 if device == "cuda" else torch.float32,
             device_map="auto",
             trust_remote_code=True
         )
@@ -171,7 +171,7 @@ def main():
         # Load merged SFT as base
         merged_sft = AutoModelForCausalLM.from_pretrained(
             merged_sft_path,
-            torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+            dtype=torch.float16 if device == "cuda" else torch.float32,
             device_map="auto",
             trust_remote_code=True
         )
