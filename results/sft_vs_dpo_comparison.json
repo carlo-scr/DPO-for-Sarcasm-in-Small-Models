@@ -1,0 +1,20 @@
+{
+  "evaluation_date": "2025-12-02T16:43:04.971642",
+  "test_set": "/Users/carloschreiber/Desktop/Uni/Quarter 1/CS229 - Machine Learning/Sarcasm/data/splits/gen_test.csv",
+  "found_dpo_better_example": true,
+  "example": {
+    "index": 10,
+    "text": "If you truly believe this then I think you need to re-read your posts and put yourself in the shoes of those on the receiving end. ",
+    "true_label": "notsarc",
+    "true_label_binary": 0,
+    "sft_prediction": 1,
+    "sft_response": "Yes.",
+    "sft_confidence": 44.07,
+    "sft_correct": false,
+    "dpo_prediction": 0,
+    "dpo_response": "No.",
+    "dpo_confidence": 55.93,
+    "dpo_correct": true
+  },
+  "samples_checked": 11
+}
