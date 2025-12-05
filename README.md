@@ -136,7 +136,7 @@ python dpo_train_v2.py
 | SFT | 69.8% ± 2.7% | 67.6% | 76.0% | 71.6% ± 2.0% |
 | **DPO** | **73.8% ± 2.9%** | 69.8% | 84.0% | **76.2% ± 2.5%** |
 
-### Out-of-Distribution (SARC, n=500)
+### Out-of-Distribution (SARC, n=1000)
 
 | Model | Accuracy | Precision | Recall | F1 |
 |-------|----------|-----------|--------|-----|
