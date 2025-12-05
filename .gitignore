@@ -17,3 +17,4 @@ wandb/
 
 # Environment variables (API keys)
 .env
+data/
