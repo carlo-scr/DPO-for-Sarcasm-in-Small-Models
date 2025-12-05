@@ -1,252 +1,284 @@
-# Sarcasm Detection with Qwen2.5-0.5B
+# Sarcasm Detection with Small Language Models
 
-This project uses a **two-phase training strategy** for sarcasm detection:
-1. **Phase 1 (SFT)**: Supervised fine-tuning on large SARC dataset
-2. **Phase 2 (DPO)**: Direct Preference Optimization on high-quality iSarcasm dataset
+[![CS229](https://img.shields.io/badge/Stanford-CS229-8C1515?style=flat-square)](https://cs229.stanford.edu/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Qwen](https://img.shields.io/badge/Qwen2.5-0.5B-6366F1?style=flat-square)](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)
 
-## Training Strategy
+> **CS229 Machine Learning Final Project** - Training efficient small language models for sarcasm detection through Supervised Fine-Tuning (SFT) and Direct Preference Optimization (DPO).
 
-### Why Two Phases?
+## 📊 Key Results
 
-**Phase 1: SARC (Volume)**
-- Large dataset (~1M samples) provides broad pattern learning
-- Teaches model general sarcasm indicators
-- Balanced sarcastic/non-sarcastic examples
+| Model | Accuracy | F1 Score | Latency (ms) | Parameters |
+|-------|----------|----------|--------------|------------|
+| **GPT-4** (zero-shot) | 79.7% | 78.8% | 631 ± 261 | ~1.76T |
+| Qwen2.5-0.5B (zero-shot) | 49.6% | 42.2% | 140 ± 7 | 0.5B |
+| **+ SFT** | 69.8% | 71.6% | 171 ± 12 | 0.5B |
+| **+ DPO** | **73.8%** | **76.2%** | 165 ± 2 | 0.5B |
 
-**Phase 2: iSarcasm (Quality)**
-- Smaller (4k samples) but expert-annotated
-- Rich multi-dimensional labels (irony, satire, overstatement, etc.)
-- DPO refines model's decision boundaries and confidence
-- Teaches "what good sarcasm detection looks like"
+**Highlights:**
+- 📈 **+24.2pp** accuracy improvement from base to DPO
+- ⚡ **3.8× faster** inference than GPT-4
+- 🎯 **96.6%** of GPT-4's F1 score with **3,500× fewer parameters**
 
-This approach combines **quantity** (SARC) with **quality** (iSarcasm) for optimal performance.
+## 🏗️ Architecture
 
-## Setup
-
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                     Two-Phase Training Pipeline                      │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐        │
+│  │   Base Model  │ ──▶ │   SFT Model   │ ──▶ │   DPO Model   │       │
+│  │  Qwen2.5-0.5B │     │   + LoRA      │     │   + LoRA      │       │
+│  └──────────────┘     └──────────────┘     └──────────────┘        │
+│         │                     │                     │               │
+│         ▼                     ▼                     ▼               │
+│      49.6%                 69.8%                 73.8%              │
+│                                                                      │
+│  Phase 1: SFT on IAC-V2         Phase 2: DPO on iSarcasm            │
+│  (4,000 samples)                (286 preference pairs)              │
+│  Learning: Pattern recognition  Learning: Error correction           │
+│                                                                      │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
-2. Check your datasets:
-```bash
-python prepare_data.py
-```
-
-## Complete Workflow
-
-### Step 0: Baseline Evaluation (Optional but Recommended)
-Evaluate the pre-trained model before fine-tuning:
-
-```bash
-python evaluate_qwen.py
-```
-
-This provides a baseline to compare against after training.
-
-**Or run comprehensive evaluation across all stages:**
-```bash
-python evaluate_all_stages.py
-```
-This will evaluate:
-1. Base model (zero-shot)
-2. After SFT (if checkpoint exists)
-3. After DPO (if checkpoint exists)
-
-And produce a comparative analysis showing improvements at each stage.
-
-### Step 1: Phase 1 - SFT on SARC
-Train on the large SARC dataset:
-
-```bash
-python finetune_qwen.py
-```
-
-This will:
-- Load Qwen2.5-0.5B-Instruct base model
-- Apply LoRA for efficient fine-tuning
-- Train on SARC dataset (50k samples by default, adjust in script)
-- Save checkpoint to `./qwen_sarc_sft/`
-- Takes ~1-3 hours depending on sample size and hardware
-
-**Training parameters:**
-- Dataset: `data/SARC/train-balanced-sarcasm.csv`
-- Sample size: 50,000 (adjustable in script)
-- LoRA rank: 16
-- Epochs: 3
-- Batch size: 4 (effective: 16 with gradient accumulation)
-
-### Step 2: Phase 2 - DPO on iSarcasm
-Refine with preference optimization:
-
-```bash
-python dpo_train.py
-```
-
-This will:
-- Load the Phase 1 SFT checkpoint from `./qwen_sarc_sft/`
-- Create preference pairs from iSarcasm annotations
-- Use DPO to align model preferences
-- Save final model to `./qwen_sarcasm_dpo/`
-- Takes ~30-60 minutes
-
-**DPO features:**
-- Uses iSarcasm's rich annotations (irony, satire, etc.)
-- Chosen: Correct label with contextual reasoning
-- Rejected: Common failure modes
-- Beta parameter: 0.1 (DPO temperature)
-
-### Step 3: Evaluate Final Model
-Test the DPO-trained model:
-
-```bash
-# Modify evaluate_qwen.py to load your trained model:
-# model_name = "./qwen_sarcasm_dpo"
-python evaluate_qwen.py
-```
-
-**Or run comprehensive comparison:**
-```bash
-python evaluate_all_stages.py
-```
-
-This will:
-- Evaluate all three stages (Base, SFT, DPO)
-- Calculate accuracy, precision, recall, F1 for each
-- Show improvement at each stage
-- Save detailed results to JSON files
-- Cache results to avoid re-running expensive evaluations
-
-**Results saved to:**
-- `comparative_results.json` - All results in one file
-- `results_base_model.json` - Base model results (cached)
-- `results_sft_model.json` - SFT model results
-- `results_dpo_model.json` - DPO model results
-
-## Dataset Information
-
-### SARC Dataset
-- **Location**: `data/SARC/train-balanced-sarcasm.csv`
-- **Size**: ~255MB, ~1M samples
-- **Format**: Reddit comments with sarcasm labels
-- **Use**: Phase 1 (SFT) - Pattern learning
-
-### iSarcasm Dataset
-- **Location**: `data/isarcasm2022.csv`  
-- **Size**: 4,014 samples
-- **Format**: Tweets with rich annotations
-- **Labels**:
-  - `sarcastic`: Binary sarcasm label
-  - `irony`, `satire`, `overstatement`, `understatement`, `rhetorical_question`: Sarcasm types
-- **Use**: Phase 2 (DPO) - Preference alignment
-
-## Model Details
-
-- **Base Model**: Qwen/Qwen2.5-0.5B-Instruct
-- **Method**: LoRA fine-tuning → DPO alignment
-- **Parameters**: 0.49B total (0.36B non-embedding)
-- **Task**: Binary sarcasm classification
-
-## Training Configuration
-
-### LoRA Settings (Phase 1)
-```python
-r=16                    # Rank
-lora_alpha=32          # Scaling factor
-target_modules=[       # Attention layers
-    "q_proj", "k_proj", 
-    "v_proj", "o_proj"
-]
-lora_dropout=0.05
-```
-
-### DPO Settings (Phase 2)
-```python
-beta=0.1               # DPO temperature
-learning_rate=5e-5     # Lower LR for fine refinement
-epochs=3
-```
-
-## Expected Results
-
-- **Zero-shot baseline**: ~50-65% accuracy
-- **After Phase 1 (SFT)**: ~75-85% accuracy
-- **After Phase 2 (DPO)**: ~80-90% accuracy + better calibration
-
-DPO particularly improves:
-- Confidence calibration
-- Edge case handling
-- Type-specific accuracy (irony vs satire)
-
-## Utilities
-
-### Check Dataset Status
-```bash
-python prepare_data.py
-```
-
-Shows:
-- Available datasets
-- Sample counts and class balance
-- Sarcasm type distributions
-- Training strategy overview
-
-### Create Train/Val Splits
-The script automatically handles splitting, but you can customize:
-```python
-from prepare_data import create_train_val_split
-create_train_val_split("data/isarcasm2022.csv", train_ratio=0.8)
-```
-
-## File Structure
+## 📁 Project Structure
 
 ```
 .
 ├── data/
-│   ├── SARC/
-│   │   └── train-balanced-sarcasm.csv  # Phase 1 training data
-│   └── isarcasm2022.csv                 # Phase 2 training data
-├── evaluate_qwen.py                     # Evaluation script
-├── finetune_qwen.py                     # Phase 1: SFT on SARC
-├── dpo_train.py                         # Phase 2: DPO on iSarcasm
-├── prepare_data.py                      # Data utilities
-├── requirements.txt                     # Dependencies
-└── README.md                            # This file
-
-# Generated during training:
-├── qwen_sarc_sft/                       # Phase 1 checkpoint
-├── qwen_sarcasm_dpo/                    # Final model
-└── evaluation_results.json              # Evaluation metrics
+│   ├── GEN-sarc-notsarc.csv          # IAC-V2 dataset (in-distribution)
+│   ├── isarcasm2022.csv               # iSarcasm dataset (DPO preferences)
+│   ├── SARC/                          # SARC dataset (out-of-distribution)
+│   │   └── train-balanced-sarcasm.csv
+│   └── splits/                        # Train/test splits
+│       ├── gen_train.csv
+│       └── gen_test.csv
+├── models/
+│   ├── sft/                           # SFT model checkpoint (LoRA)
+│   └── qwen_dpo_mistakes/             # DPO model checkpoint (LoRA)
+├── scripts/
+│   ├── Qwen2.5/
+│   │   ├── finetune_qwen.py           # SFT training script
+│   │   ├── dpo_train_v2.py            # DPO training script
+│   │   ├── evaluate_all_stages_qwen.py # IAC-V2 evaluation
+│   │   ├── evaluate_all_stages_sarc.py # SARC evaluation
+│   │   └── measure_latency.py         # Latency benchmarking
+│   ├── evaluate_variance.py           # 5-run variance evaluation
+│   └── create_splits.py               # Dataset splitting utilities
+├── results/
+│   ├── comparative_results.json       # IAC-V2 evaluation results
+│   ├── comparative_results_sarc.json  # SARC evaluation results
+│   └── latency_results.json           # Latency benchmarks
+├── visualizations/
+│   ├── results_visualization.ipynb    # Figure generation notebook
+│   └── fig_*.pdf                      # Generated figures
+├── notebooks/
+│   └── train_colab.ipynb              # Google Colab training notebook
+├── requirements.txt
+└── README.md
 ```
 
-## Tips & Troubleshooting
+## 🚀 Quick Start
 
-1. **Memory Issues**: Reduce `sample_size` in finetune_qwen.py or decrease batch size
-2. **Slow Training**: Start with 10k-50k samples from SARC, increase if needed
-3. **PyArrow Errors**: Run `pip install --force-reinstall pyarrow`
-4. **Model Loading**: Ensure you're using `transformers>=4.37.0`
+### Prerequisites
 
-## Customization
+- Python 3.10+
+- CUDA-capable GPU (recommended) or Apple Silicon Mac
+- ~8GB GPU memory for training, ~4GB for inference
 
-### Adjust Training Sample Size
-In `finetune_qwen.py`:
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/carlo-scr/Sarcasm.git
+cd Sarcasm
+
+# Create conda environment (recommended)
+conda create -n sarcasm python=3.10
+conda activate sarcasm
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Run Evaluation (Pre-trained Models)
+
+```bash
+# Evaluate all models on IAC-V2 test set
+cd scripts/Qwen2.5
+python evaluate_all_stages_qwen.py
+
+# Evaluate on SARC (out-of-distribution)
+python evaluate_all_stages_sarc.py
+```
+
+### Train from Scratch
+
+```bash
+# Phase 1: Supervised Fine-Tuning
+cd scripts/Qwen2.5
+python finetune_qwen.py
+
+# Phase 2: Direct Preference Optimization
+python dpo_train_v2.py
+```
+
+## 📈 Detailed Results
+
+### In-Distribution (IAC-V2 Test Set, n=1000)
+
+| Model | Accuracy | Precision | Recall | F1 |
+|-------|----------|-----------|--------|-----|
+| GPT-4 | 79.7% | 82.9% | 75.0% | 78.8% |
+| Base | 49.6% ± 2.9% | 49.5% | 36.8% | 42.2% ± 2.6% |
+| SFT | 69.8% ± 2.7% | 67.6% | 76.0% | 71.6% ± 2.0% |
+| **DPO** | **73.8% ± 2.9%** | 69.8% | 84.0% | **76.2% ± 2.5%** |
+
+### Out-of-Distribution (SARC, n=500)
+
+| Model | Accuracy | Precision | Recall | F1 |
+|-------|----------|-----------|--------|-----|
+| Base | 51.0% | 51.1% | 47.2% | 49.1% ± 1.7% |
+| SFT | 52.6% | 51.6% | 83.6% | 63.8% ± 2.2% |
+| **DPO** | **56.4%** | 53.8% | 90.8% | **67.6% ± 2.2%** |
+
+### Latency Comparison (per sample)
+
+| Model | Mean (ms) | Std (ms) | Speedup vs GPT-4 |
+|-------|-----------|----------|------------------|
+| GPT-4 | 631.4 | 261.5 | 1.0× |
+| Base Qwen | 140.0 | 7.4 | 4.5× |
+| SFT | 170.6 | 11.9 | 3.7× |
+| **DPO** | 165.0 | 2.2 | **3.8×** |
+
+## 🔬 Methodology
+
+### Phase 1: Supervised Fine-Tuning (SFT)
+
+- **Dataset**: IAC-V2 (GEN-sarc-notsarc), 4,000 balanced samples
+- **Method**: LoRA fine-tuning (rank=16, alpha=32)
+- **Target modules**: q_proj, k_proj, v_proj, o_proj
+- **Training**: 2 epochs, batch size 4, lr=2e-4
+
+### Phase 2: Direct Preference Optimization (DPO)
+
+- **Dataset**: iSarcasm2022 preference pairs (286 samples)
+- **Method**: DPO on top of SFT checkpoint
+- **Beta**: 0.1
+- **Key insight**: Uses SFT model's mistakes to create preference pairs
+
+### Preference Pair Generation
+
+```
+Chosen: Correct prediction with reasoning
+Rejected: Common error pattern
+
+Example:
+Text: "Oh great, another meeting that could've been an email."
+Chosen: "Yes" (correctly identifies sarcasm)
+Rejected: "No" (common failure mode)
+```
+
+## 📊 Reproducing Results
+
+### Generate Visualizations
+
+```bash
+# Open the visualization notebook
+cd visualizations
+jupyter notebook results_visualization.ipynb
+```
+
+This generates all paper figures:
+- `fig_model_comparison.pdf` - Accuracy comparison
+- `fig_f1_comparison.pdf` - F1 score comparison
+- `fig_confusion_matrices.pdf` - 2×2 confusion matrix grid
+- `fig_id_vs_ood.pdf` - Generalization analysis
+- `fig_efficiency_frontier.pdf` - Accuracy vs latency plot
+
+### Run Variance Analysis
+
+```bash
+# 5-run evaluation for error bars
+cd scripts
+python evaluate_variance.py       # IAC-V2
+python evaluate_variance_sarc.py  # SARC
+```
+
+## 🗃️ Datasets
+
+| Dataset | Size | Source | Use |
+|---------|------|--------|-----|
+| IAC-V2 (GEN) | 4,000 | [Internet Argument Corpus](https://nlds.soe.ucsc.edu/iac2) | SFT training + ID evaluation |
+| iSarcasm | 4,014 | [iSarcasmEval](https://github.com/iabufarha/iSarcasmEval) | DPO preference pairs |
+| SARC | 1M+ | [SARC](https://nlp.cs.princeton.edu/SARC/) | OOD evaluation |
+
+## 📄 Model Checkpoints
+
+Pre-trained LoRA adapters are available in the `models/` directory:
+
+| Model | Path | Size |
+|-------|------|------|
+| SFT | `models/sft/` | ~5MB |
+| DPO | `models/qwen_dpo_mistakes/` | ~5MB |
+
+To load a model:
+
 ```python
-sample_size=50000  # Increase to 100k, 500k, or None (full dataset)
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
+
+# Load base model
+base_model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
+
+# Load LoRA adapter
+model = PeftModel.from_pretrained(base_model, "models/qwen_dpo_mistakes")
 ```
 
-### Change LoRA Rank (more parameters)
-```python
-r=32  # Higher = more capacity, more memory
+## 🔧 Configuration
+
+### Training Hyperparameters
+
+| Parameter | SFT | DPO |
+|-----------|-----|-----|
+| Learning rate | 2e-4 | 5e-5 |
+| Batch size | 4 | 4 |
+| Epochs | 2 | 3 |
+| LoRA rank | 16 | 16 |
+| LoRA alpha | 32 | 32 |
+| Gradient accumulation | 4 | 4 |
+| Max length | 256 | 256 |
+| Beta (DPO only) | - | 0.1 |
+
+### Hardware Requirements
+
+| Task | GPU Memory | Time |
+|------|------------|------|
+| Inference | 2-4 GB | ~0.17s/sample |
+| SFT Training | 6-8 GB | ~30 min |
+| DPO Training | 6-8 GB | ~20 min |
+
+## 📚 Citation
+
+```bibtex
+@misc{schreiber2025sarcasm,
+  title={Efficient Sarcasm Detection with Small Language Models via SFT and DPO},
+  author={Schreiber, Carlo},
+  year={2025},
+  institution={Stanford University, CS229}
+}
 ```
 
-### Adjust DPO Beta
-```python
-beta=0.2  # Higher = stronger preference enforcement
-```
+## 🙏 Acknowledgments
 
-## Citation
+- [Qwen Team](https://github.com/QwenLM/Qwen2.5) for the base model
+- [iSarcasmEval](https://github.com/iabufarha/iSarcasmEval) for the iSarcasm dataset
+- [TRL Library](https://github.com/huggingface/trl) for DPO implementation
+- Stanford CS229 course staff
 
-If you use this code or approach, please cite:
-- Qwen2.5: https://qwenlm.github.io/blog/qwen2.5/
-- iSarcasm: https://github.com/iabufarha/iSarcasmEval
-- SARC: https://nlp.cs.princeton.edu/SARC/
+## 📝 License
+
+This project is for educational purposes as part of Stanford CS229. The datasets are subject to their respective licenses.
